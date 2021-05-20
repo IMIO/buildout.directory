@@ -1,4 +1,4 @@
 buildout.directory
 -----------------
 
-This is the iMio direcotry (for smartweb) buildout.
+This is the iMio directory (for smartweb) buildout.
