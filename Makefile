@@ -1,7 +1,7 @@
 #!/usr/bin/make
 all: buildout
 
-IMAGE_NAME="docker-staging.imio.be/smartweb_directory/mutual:latest"
+IMAGE_NAME="smartweb/directory:latest"
 
 buildout.cfg:
 	ln -fs dev.cfg buildout.cfg
@@ -27,12 +27,11 @@ upgrade-steps:
 	bin/instance -O plone run scripts/run_portal_upgrades.py
 
 eggs:  ## Copy eggs from docker image to speed up docker build
-	-docker run --entrypoint='' $(IMAGE_NAME) tar -c -C /plone eggs | tar x
+	-docker run --entrypoint='' http://docker-staging.imio.be/$(IMAGE_NAME) tar -c -C /plone eggs | tar x
 	mkdir -p eggs
 
 docker-image: eggs  ## Build docker image
-	mkdir -p eggs
-	docker build --pull -t smartweb_directory/mutual:latest .
+	docker build --pull -t $(IMAGE_NAME)
 
 lint:
 	pre-commit run --all
