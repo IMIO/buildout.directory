@@ -31,7 +31,7 @@ eggs:  ## Copy eggs from docker image to speed up docker build
 	mkdir -p eggs
 
 docker-image: eggs  ## Build docker image
-	docker build --pull -t $(IMAGE_NAME)
+	docker build --pull -t $(IMAGE_NAME) .
 
 lint:
 	pre-commit run --all
