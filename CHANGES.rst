@@ -1,7 +1,8 @@
 1.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update buildout to use Plone 6.0.0a3 packages versions
+  [boulch]
 
 
 1.0a1 (2022-01-26)
