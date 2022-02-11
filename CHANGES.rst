@@ -1,6 +1,14 @@
 1.0a2 (unreleased)
 ------------------
 
+- imio.directory.core 1.0a2
+
+    - Add more checks / automatic corrections in contacts CSV import
+      [laulaz]
+
+    - Update buildout to use Plone 6.0.0a3 packages versions
+      [boulch]
+
 - Update buildout to use Plone 6.0.0a3 packages versions
   [boulch]
 
