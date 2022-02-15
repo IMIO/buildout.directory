@@ -28,12 +28,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip \
     wget \
     zlib1g-dev \
-  && pip3 install --no-cache-dir pip==$PIP setuptools==$SETUPTOOLS zc.buildout==$ZC_BUILDOUT
+  && pip3 install --no-cache-dir pip==$PIP setuptools==$SETUPTOOLS zc.buildout==$ZC_BUILDOUT py-spy
 
 WORKDIR /plone
 RUN chown imio:imio -R /plone && mkdir /data && chown imio:imio -R /data
 
-COPY --chown=imio eggs /plone/eggs/
+#COPY --chown=imio eggs /plone/eggs/
 COPY --chown=imio *.cfg /plone/
 COPY --chown=imio scripts /plone/scripts
 RUN su -c "buildout -c prod.cfg -t 30 -N" -s /bin/sh imio
@@ -74,6 +74,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN curl -L https://github.com/Yelp/dumb-init/releases/download/v1.2.5/dumb-init_1.2.5_amd64.deb > /tmp/dumb-init.deb && dpkg -i /tmp/dumb-init.deb && rm /tmp/dumb-init.deb
 COPY --chown=imio --from=builder /plone .
 COPY --from=builder /usr/local/lib/python3.8/dist-packages /usr/local/lib/python3.8/dist-packages
+COPY --from=builder /usr/local/bin/py-spy /usr/local/bin/py-spy
 COPY --chown=imio docker-initialize.py docker-entrypoint.sh /
 
 USER imio
