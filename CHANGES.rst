@@ -1,5 +1,5 @@
-1.0a3 (unreleased)
-------------------
+1.0 (2022-03-01)
+----------------
 
 - Use Gunicorn instead of Waitress.
   [bsuttor]
