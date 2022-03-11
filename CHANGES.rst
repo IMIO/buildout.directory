@@ -1,7 +1,8 @@
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Use collective.taxonomy checkout to fix taxonomy data TTW edition
+  [laulaz]
 
 
 1.0 (2022-03-01)
