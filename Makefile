@@ -26,12 +26,11 @@ cleanall:
 upgrade-steps:
 	bin/instance -O plone run scripts/run_portal_upgrades.py
 
-eggs:  ## Copy eggs from docker image to speed up docker build
-	-docker run --entrypoint='' docker-staging.imio.be/$(IMAGE_NAME) tar -c -C /plone eggs | tar x
-	mkdir -p eggs
-
 docker-image: eggs  ## Build docker image
 	docker build --pull --no-cache -t $(IMAGE_NAME) .
+
+test-image:
+	echo "test to do"
 
 lint:
 	pre-commit run --all
