@@ -1,4 +1,4 @@
-1.0.1 (unreleased)
+1.0.1 (2022-03-11)
 ------------------
 
 - Use collective.taxonomy checkout to fix taxonomy data TTW edition
