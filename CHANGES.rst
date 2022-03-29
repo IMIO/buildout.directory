@@ -1,6 +1,9 @@
 1.0.3 (unreleased)
 ------------------
 
+- Remove gunicorn timeout to allow long requests
+  [laulaz]
+
 - Switch collective.solr from auto-checkout to 9.0.0a6 pinned buildout.smartweb version
   [boulch]
 
