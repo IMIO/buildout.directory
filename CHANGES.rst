@@ -1,7 +1,8 @@
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Use released version for collective.z3cform.select2
+  [laulaz]
 
 
 1.0.3 (2022-03-29)
