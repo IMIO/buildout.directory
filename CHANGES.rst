@@ -1,6 +1,14 @@
 1.0.4 (unreleased)
 ------------------
 
+- imio.directory.core 1.0a3
+
+    - Use unique urls for images scales to ease caching
+      [boulch]
+
+    - Use common.interfaces.ILocalManagerAware to mark a locally manageable content
+      [boulch]
+
 - imio.smartweb.common 1.0.4
 
     - Limit uploaded files sizes to 20Mo with JS (without reaching the server)
