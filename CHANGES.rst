@@ -1,6 +1,57 @@
 1.0.4 (unreleased)
 ------------------
 
+- imio.smartweb.locales 1.0.3
+
+    - Add translation for image upload
+      [laulaz]
+
+    - Add translations for new icons
+      [laulaz]
+
+- imio.smartweb.locales 1.0.2
+
+    - Add Hero banner related translations
+      [laulaz]
+
+- imio.smartweb.locales 1.0.1
+
+    - Add missing translation for Local Manager & lead image portrait mode
+      [laulaz]
+
+- imio.smartweb.locales 1.0
+
+    - Change 'minisite' to 'site partenaire' in French
+      [laulaz]
+
+    - Add icon field related translations
+      [laulaz]
+
+- imio.smartweb.locales 1.0a16
+
+    - Fix translation
+      [laulaz]
+
+- imio.smartweb.locales 1.0a15
+
+    - Add new icons translations (e-guichet & shopping)
+      [laulaz]
+
+- imio.smartweb.locales 1.0a14
+
+    - Add social network translation
+      [laulaz]
+
+- imio.smartweb.locales 1.0a13
+
+    - Add event dates related translations
+      [laulaz]
+
+- imio.smartweb.locales 1.0a12
+
+    - Add e_guichet view and taxonomies instance behaviors translations
+      [laulaz]
+
 - imio.directory.core 1.0a3
 
     - Use unique urls for images scales to ease caching
