@@ -1,6 +1,36 @@
 1.0.4 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.0.4
+
+    - Limit uploaded files sizes to 20Mo with JS (without reaching the server)
+      [laulaz]
+
+    - Add help text on lead image field also on edit forms
+      [laulaz]
+
+- imio.smartweb.common 1.0.3
+
+    - Hide faceted actions
+      [boulch]
+
+- imio.smartweb.common 1.0.2
+
+    - Hide unwanted upgrades from site-creation and quickinstaller
+      [boulch]
+
+    - Add local manager role and sharing permissions rolemap
+      [boulch]
+
+    - Add help text on lead image fields
+      [boulch]
+
+    - Fix privacy views JS calls (sometimes called on Zope root instead of Plone root)
+      [laulaz]
+
+    - Add Subject keywords to SearchableText index
+      [laulaz]
+
 - Use released version for collective.z3cform.select2
   [laulaz]
 
