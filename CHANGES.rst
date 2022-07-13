@@ -1,4 +1,4 @@
-1.0.5 (unreleased)
+1.0.5 (2022-07-13)
 ------------------
 
 - Update pas.plugins.imio 2.0.5, see https://github.com/IMIO/pas.plugins.imio/blob/2.0.5/CHANGES.rst
