@@ -1,7 +1,8 @@
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update pas.plugins.imio 2.0.5, see https://github.com/IMIO/pas.plugins.imio/blob/2.0.5/CHANGES.rst
+  [bsuttor]
 
 
 1.0.4 (2022-05-03)
