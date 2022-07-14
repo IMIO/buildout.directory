@@ -1,7 +1,56 @@
 1.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.0a4
+
+    - Update contact_category taxonomy data to reflect production site data
+      [laulaz]
+
+    - [WEBMIGP5-36] Add new vocabulary terms in imio.directory.vocabulary.SiteTypes (Instagram, Pinterest, Youtube)
+      [boulch]
+
+    - It's not allowed to put Images or Files in imio.directory.Entity
+      [boulch]
+
+- imio.smartweb.common 1.0.7
+
+    - Add connection link in colophon
+      [laulaz]
+
+- imio.smartweb.common 1.0.6
+
+    - Add ban_physicalpath method (taken from policy)
+      [boulch, laulaz]
+
+- imio.smartweb.common 1.0.5
+
+    - Refactor rich description to retrieve html on a any description
+      (from context or from other ways)
+      [boulch]
+
+- imio.smartweb.locales 1.0.6
+
+    - Add Dutch translations files
+      [laulaz]
+
+    - Add faceted map translation
+      [laulaz]
+
+    - Add propose URLs translations
+      [laulaz]
+
+- imio.smartweb.locales 1.0.5
+
+    - Add translation for Agent connection
+      [laulaz]
+
+- imio.smartweb.locales 1.0.4
+
+    - Add translations for contact gallery
+      [laulaz]
+
+    - Add translations for post-it section
+      [laulaz]
 
 
 1.0.5 (2022-07-13)
