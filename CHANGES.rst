@@ -1,7 +1,8 @@
 1.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update pas.plugins.imio 2.0.6.
+  [bsuttor]
 
 
 1.0.6-quick (2022-07-14)
