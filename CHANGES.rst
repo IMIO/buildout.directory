@@ -1,7 +1,10 @@
 1.0.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.0a5
+
+    - WEB-3726 : Add subjects (keyword) in SearchableText
+      [boulch]
 
 
 1.0.7-quick (2022-07-18)
