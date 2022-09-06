@@ -1,4 +1,4 @@
-1.0.8 (unreleased)
+1.0.8 (2022-09-06)
 ------------------
 
 - Blobs are now on filesystem.
