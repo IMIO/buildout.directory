@@ -1,7 +1,13 @@
 1.0.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.0a6
+
+    - WEB-3770 : Force include_items in serializer to True to get files and pictures included in contact
+      [boulch]
+
+    - Add eea.faceted.navigable behavior on Entity type
+      [laulaz]
 
 
 1.0.8 (2022-09-06)
