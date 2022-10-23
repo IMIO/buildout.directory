@@ -1,4 +1,4 @@
-1.0.9 (unreleased)
+1.0.9 (2022-10-23)
 ------------------
 
 - imio.directory.core 1.0a6
