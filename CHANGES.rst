@@ -1,7 +1,22 @@
 1.0.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.smartweb.locales 1.0.7
+
+    - Add some directory fields translations
+      [boulch]
+
+    - Exclude profiles.zcml from translations
+      [laulaz]
+
+- imio.directory.core 1.0a7
+
+    - Fix translation
+      [boulch]
+
+    - WEB-3762 : Reorder contact fields to encourage good completion + add some fields descriptions
+      [boulch]
+
 
 
 1.0.9 (2022-10-23)
