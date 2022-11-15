@@ -1,7 +1,37 @@
 1.0.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.0
+
+    - Add multilingual features: New fields, vocabularies translations, restapi serializer
+      [laulaz]
+
+- imio.directory.policy 1.0
+
+    - Add available languages to prepare for multilingual
+      [laulaz]
+
+    - Update buildout to use Plone 6.0.0a3 packages versions
+      [boulch]
+
+- imio.smartweb.locales 1.0.8
+
+    - Add missing French translations (Sendinblue, multilingual)
+      [laulaz]
+
+- imio.smartweb.common 1.0.9
+
+    - Add helper method to get language from smartweb REST requests This is needed for multilingual authentic sources
+      [laulaz]
+
+    - Allow to translate vocabulary terms titles in search-filters endpoint This is needed for multilingual authentic sources
+      [laulaz]
+
+- imio.smartweb.common 1.0.8
+
+    - MWEB-54 : Update TinyMCE : Add non breaking space option
+      [boulch]
+
 
 
 1.0.10 (2022-10-30)
