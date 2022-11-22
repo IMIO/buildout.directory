@@ -19,6 +19,11 @@
     - Add missing French translations (Sendinblue, multilingual)
       [laulaz]
 
+- imio.smartweb.common 1.0.10
+
+    - Ignore batch related query parameters for search-filters endpoint
+      [laulaz]
+
 - imio.smartweb.common 1.0.9
 
     - Add helper method to get language from smartweb REST requests This is needed for multilingual authentic sources
