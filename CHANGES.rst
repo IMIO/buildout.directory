@@ -1,6 +1,36 @@
 1.1.0 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.1
+
+    - Add monkeypatch to fix TTW resource calling
+      See https://github.com/plone/Products.CMFPlone/issues/3705
+      [laulaz]
+
+    - Uninstall collective.js.jqueryui
+      [boulch]
+
+    - Remove faceted deprecated bundles
+      [boulch]
+
+    - Migrate to Plone 6 : remove dexteritytextindexer, use new simplified
+      resources registry, fix TinyMCE configuration and images scales,
+      manual minimized js
+      [laulaz, boulch]
+
+- imio.directory.policy 1.1
+
+    - Update to Plone 6.0.0 final
+      [boulch]
+
+- imio.directory.core 1.1
+
+    - Update to Plone 6.0.0 final
+      [boulch]
+
+    - Add eea.faceted.navigable behavior on Entity type
+      [laulaz]
+
 - Update to Plone 6.0.0 final
   [boulch]
 
