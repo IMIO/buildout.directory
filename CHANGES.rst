@@ -1,6 +1,14 @@
 1.1.0 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.1.2
+
+    - Call @@consent-json view on navigation root (instead of context)
+      [laulaz]
+
+    - Ensure Ajax requests are always uncached
+      [laulaz]
+
 - Update to Plone 6.0.0.2
   [laulaz]
 
