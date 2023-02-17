@@ -1,6 +1,14 @@
 1.1.0 (unreleased)
 ------------------
 
+- plone.formwidget.geolocation > fix-geosearch
+
+    - Fix usage of default location from configuration
+      [mpeeters]
+
+    - Ensure that the marker is the main marker to fix geosearch
+      [mpeeters]
+
 - imio.smartweb.common 1.1.2
 
     - Call @@consent-json view on navigation root (instead of context)
