@@ -1,6 +1,14 @@
 1.1.0 (unreleased)
 ------------------
 
+- imio.directory.core 1.1.2
+
+    - Remove unused title_fr and description_fr metadatas
+      [laulaz]
+
+    - Remove SearchableText_fr (Solr will use SearchableText for FR)
+      [laulaz]
+
 - plone.formwidget.geolocation > fix-geosearch
 
     - Fix usage of default location from configuration
