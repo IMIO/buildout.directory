@@ -1,7 +1,15 @@
 1.2.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.locales 1.1.2
+
+    - WEB-3848 : Add missing translations
+      [boulch]
+
+- imio.smartweb.common 1.1.3
+
+    - WEB-3852 : Fix atom/syndication registry keys
+      [boulch]
 
 
 1.2 (2023-02-20)
