@@ -1,6 +1,17 @@
 1.2.0 (unreleased)
 ------------------
 
+- imio.directory.core 1.1.3
+
+    - Avoid auto-appending new lines to Datagrid fields when clicked
+      [laulaz]
+
+    - Fix reindex after cut / copy / paste in some cases
+      [laulaz]
+
+    - Add DE translations in contact_category taxonomy
+      [laulaz]
+
 - imio.smartweb.locales 1.1.2
 
     - WEB-3848 : Add missing translations
