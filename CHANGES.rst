@@ -1,6 +1,11 @@
 1.2.3 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.1.5
+
+    - WEB-3862 : Patch (Remove select2) eea.facetednavigation jquery
+      [laulaz, boulch]
+
 - Get collective.solr = 9.1.1 from buildout.smartweb/versions.cfg
   [boulch]
 
