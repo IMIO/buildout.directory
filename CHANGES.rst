@@ -1,6 +1,11 @@
 1.2.3 (unreleased)
 ------------------
 
+- imio.directory.core 1.1.5
+    
+    - Fix "required field" errors in empty Datagridfield rows
+      [laulaz]
+
 - imio.smartweb.common 1.1.5
 
     - WEB-3862 : Patch (Remove select2) eea.facetednavigation jquery
