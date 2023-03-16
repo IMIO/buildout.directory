@@ -1,6 +1,11 @@
 1.2.3 (unreleased)
 ------------------
 
+- imio.directory.core 1.1.6
+
+    - Define non empty fields for choices in contact Datagridfield rows & fix labels
+      [laulaz]
+
 - imio.directory.core 1.1.5
     
     - Fix "required field" errors in empty Datagridfield rows
