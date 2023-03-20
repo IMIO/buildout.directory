@@ -26,7 +26,7 @@ cleanall:
 upgrade-steps:
 	bin/instance -O plone run scripts/run_portal_upgrades.py
 
-docker-image: eggs  ## Build docker image
+docker-image:
 	docker build --pull --no-cache -t $(IMAGE_NAME) .
 
 test-image:
