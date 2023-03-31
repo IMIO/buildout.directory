@@ -1,7 +1,10 @@
 1.2.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.1.8
+
+    - WEB-3909 : Add upgrade step to fix wrongly stored datagrid fields values
+      [laulaz]
 
 
 1.2.4-quick (2023-03-20)
