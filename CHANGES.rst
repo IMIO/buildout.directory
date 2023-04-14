@@ -1,6 +1,14 @@
 1.2.6 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.1.6
+
+    - Don't use image_scales metadata anymore (Fix faceted)
+      [boulch, laulaz]
+
+    - Update object modification date if cropping was removed/updated
+      [boulch, laulaz]
+
 - imio.directory.policy 1.1.2
 
     - Add module : collective.messagesviewlet
