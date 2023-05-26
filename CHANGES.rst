@@ -1,6 +1,20 @@
 1.2.7 (unreleased)
 ------------------
 
+- imio.directory.core 1.1.9
+
+    - Fix condition when facing `Missing.Value` to avoid traceback in serializer
+      [laulaz]
+
+    - WEB-3918 : Add missing DE translations for contact_category taxonomy
+      [laulaz]
+
+    - Migrate to Plone 6.0.4
+      [boulch]
+
+    - Update contact_category taxonomy data to reflect production site data
+      [laulaz]
+
 - Rollback to Zope 5.8 for now because of a bug in POST requests with gunicorn
   [boulch]
 
