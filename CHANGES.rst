@@ -1,7 +1,22 @@
 1.2.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.1.8
+
+    - WEB-3960 : Clean unhautorized xml chars out of text when added or modified contents Temporary patch.
+      Waiting for this fix : plone/plone.app.z3cform#167
+      [boulch]
+
+    - WEB-3955 : Authentic sources : Crop view on Image type should not return scales
+      [boulch]
+
+- imio.smartweb.common 1.1.7
+
+    - Change banner scale to have infinite height
+      [laulaz]
+
+    - Migrate to Plone 6.0.4
+      [boulch]
 
 
 1.2.7 (2023-05-30)
