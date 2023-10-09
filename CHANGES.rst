@@ -1,6 +1,41 @@
 1.2.8 (unreleased)
 ------------------
 
+- imio.directory.core 1.1.10
+
+    - WEB-3918 : Add missing DE translations for contact_category taxonomy
+      [laulaz]
+
+    - Update contact_category taxonomy data to reflect production site data
+      [laulaz]
+
+- imio.directory.policy 1.1.3
+
+    - WEB-3954 : Hide cropping action on Image type
+      [boulch]
+
+    - Migrate to Plone 6.0.4
+      [boulch]
+
+- imio.smartweb.locales 1.1.5
+
+    - Add missing translations [boulch]
+
+- imio.smartweb.locales 1.1.4
+
+    - Add missing French translation (folder_contents properties)
+      [laulaz]
+
+    - Migrate to Plone 6.0.4
+      [boulch]
+
+- imio.smartweb.common 1.1.9
+    - WEB-3974 : Add new registry key (imio.smartweb.common.log) to activate logging in smartweb / auth sources products
+      [boulch]
+
+    - Fix AttributeError in case of instance behaviors attributes that are not on all objects
+      [boulch]
+
 - imio.smartweb.common 1.1.8
 
     - WEB-3960 : Clean unhautorized xml chars out of text when added or modified contents Temporary patch.
