@@ -1,7 +1,14 @@
 1.2.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2
+
+    - WEB-3985 : New portrait / paysage scales & logic.
+      We have re-defined the scales & sizes used in smartweb.
+      We let the user crop only 2 big portrait / paysage scales and make the calculation behind the scenes for all
+      other smaller scales.
+      We also fixed the cropping information clearing on images changes.
+      [boulch, laulaz]
 
 
 1.2.9 (2023-10-25)
