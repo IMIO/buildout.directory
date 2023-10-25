@@ -1,7 +1,22 @@
 1.2.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.1.11
+
+    - MWEBITTA-21 : Add entities subscribing to share all contacts
+      [boulch, laulaz]
+
+- imio.smartweb.locales 1.1.7
+    - Add missing French translations
+      [boulch]
+
+    - Update translations
+      [boulch]
+
+- imio.smartweb.locales 1.1.6
+
+    - Add missing French translations (external content section and contact section)
+      [boulch]
 
 
 1.2.8 (2023-10-09)
