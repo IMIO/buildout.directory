@@ -1,6 +1,11 @@
 1.2.10 (unreleased)
 -------------------
 
+- imio.directory.core 1.2.1
+
+    - Remove logo field from cropping editor
+      [laulaz]
+
 - imio.directory.core 1.2
 
     - WEB-3985 : Use new portrait / paysage scales & logic
