@@ -1,6 +1,9 @@
 1.2.10 (unreleased)
 -------------------
 
+- Develop collective.solr to implement https connection DEVOPS-3
+  [remdub]
+
 - imio.directory.core 1.2.1
 
     - Remove logo field from cropping editor
