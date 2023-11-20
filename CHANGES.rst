@@ -1,6 +1,40 @@
 1.2.10 (unreleased)
 -------------------
 
+- imio.smartweb.common 1.2.2
+
+    - Fix missing values for facilities lists (causing None in REST views filters) See collective/collective.solr#366
+      [laulaz]
+
+    - Fix last upgrade steps: when run from command line, we need to adopt admin user to find private objects
+      [laulaz]
+
+    - WEB-4003 : Fix missing TextField mimetypes
+      [laulaz]
+
+- imio.smartweb.common 1.2.1
+    - SUP-33128 : Fix eea.facetednavigation : Hide items with 0 results
+      [boulch, laz]
+
+    - Refactor less and js compilation + Add compilations files
+      [boulch]
+
+- imio.smartweb.locales 1.1.9
+    - WEB-4018 : Add missing French translations (new termes in directory vocabulary)
+      [boulch]
+
+- imio.directory.core 1.2.2
+
+    - WEB-4018 : Add three new terms in facitilites vocabulary
+      [boulch]
+
+    - Fix missing values for topics / iam lists (causing None in REST views filters) See collective/collective.solr#366
+      [laulaz]
+
+- imio.smartweb.locales 1.1.8
+    - Add missing French translations
+      [laulaz]
+
 - Develop collective.solr to implement https connection DEVOPS-3
   [remdub]
 
