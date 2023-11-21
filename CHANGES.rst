@@ -1,6 +1,14 @@
 1.2.10 (unreleased)
 -------------------
 
+- imio.smartweb.common 1.2.3
+
+    - Improve image compression quality
+      [laulaz]
+  
+    - Change portrait scales dimensions
+      [laulaz]
+  
 - imio.smartweb.common 1.2.2
 
     - Fix missing values for facilities lists (causing None in REST views filters) See collective/collective.solr#366
