@@ -1,7 +1,8 @@
-1.3.0 (unreleased)
-------------------
+1.3.1-quick (2023-11-23)
+------------------------
 
-- Nothing changed yet.
+- Release to force new docker tag / deploy after incomplete build
+  [laulaz]
 
 
 1.3 (2023-11-22)
