@@ -1,6 +1,19 @@
 1.3.2 (unreleased)
 ------------------
 
+- imio.directory.core 1.2.3
+
+    - WEB-4041 : Handle new "carre" scale
+      [boulch]
+
+    - WEB-4007 : Update contact serializer and use ContactProperties to get well formated schedule and help displaying schedule in REACT directory view
+      [boulch]
+
+- imio.smartweb.common 1.2.6
+
+    - WEB-4041 : Add new "carre" scale
+      [boulch]
+
 - imio.smartweb.common 1.2.5
 
     - WEB-4007 : Get ContactProperties out of imio.smartweb.core to also use it in imio.directory.core and 
