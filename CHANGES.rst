@@ -1,6 +1,11 @@
 1.3.2 (unreleased)
 ------------------
 
+- imio.directory.core 1.2.4
+
+    - WEB-4052 : If no schedule so we set "table_date" to None instead of []
+      [boulch]
+
 - imio.directory.core 1.2.3
 
     - WEB-4041 : Handle new "carre" scale
