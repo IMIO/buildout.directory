@@ -1,6 +1,11 @@
 1.3.3 (unreleased)
 ------------------
 
+- imio.directory.core 1.2.6
+
+    - WEB-4006 : Also reindex solr on SearchableText upgrade step
+      [remdub]
+
 - imio.directory.core 1.2.5
 
     - WEB-4006 : Add mail and phone labels in SearchableText
