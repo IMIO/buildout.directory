@@ -1,7 +1,10 @@
 1.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.5
+
+    - WEB-4006 : Add mail and phone labels in SearchableText
+      [remdub]
 
 
 1.3.2 (2024-01-29)
