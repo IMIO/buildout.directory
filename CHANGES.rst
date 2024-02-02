@@ -1,6 +1,11 @@
 1.3.3 (unreleased)
 ------------------
 
+- imio.directory.core 1.2.7
+
+    - SUP-34841 : Fix contact serializer when contact hasn't schedule
+      [boulch]
+
 - imio.directory.core 1.2.6
 
     - WEB-4006 : Also reindex solr on SearchableText upgrade step
