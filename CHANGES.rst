@@ -1,7 +1,26 @@
 1.3.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.9
+
+    - WEB-4064 : Reindex SolR because of changes in schema
+      [remdub]
+
+- imio.smartweb.common 1.2.8
+
+    - Fix skip content sr-only
+      [thomlamb]
+
+- imio.smartweb.common 1.2.7
+
+    - WEB-4046 : Add css for "Skip to content"
+      [thomlamb]
+
+    - WEB-4046 : Add "Skip to content" link for a11y
+      [laulaz]
+
+    - WEB-4048 : Put focus on cookies accept button for a11y
+      [laulaz]
 
 
 1.3.3 (2024-02-05)
