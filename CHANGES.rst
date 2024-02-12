@@ -1,6 +1,11 @@
 1.3.4 (unreleased)
 ------------------
 
+- imio.directory.core 1.2.8
+
+    - MWEBRCHA-14 : Add view to export contacts to csv file
+      [boulch]
+
 - imio.smartweb.common 1.2.9
 
     - WEB-4064 : Reindex SolR because of changes in schema
