@@ -1,8 +1,18 @@
 1.3.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- collective.solr 9.3.0
 
+    - Add support of https connections
+      [remdub]
+
+    - Add french locales
+      [remdub]
+
+- collective.solr 9.2.3
+
+    - Add upgrade step for missing stopwords registry entries
+      [remdub]
 
 1.3.4 (2024-02-12)
 ------------------
