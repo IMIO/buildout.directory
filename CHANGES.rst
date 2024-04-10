@@ -1,6 +1,11 @@
 1.3.6 (unreleased)
 ------------------
 
+- imio.directory.core 1.2.10
+
+    - WEB-4095 : Use "|" separator instead of "," when exporting contacts to csv file
+      [boulch]
+
 - Migrate to Plone 6.0.9
   [boulch]
 
