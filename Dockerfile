@@ -1,11 +1,11 @@
 FROM imiobe/base:py3-ubuntu-20.04 as builder
 LABEL maintainer="Benoît Suttor <benoit.suttor@imio.be>"
-ENV PIP=23.0.1 \
+ENV PIP=23.3.1 \
   ZC_BUILDOUT=3.0.1 \
-  SETUPTOOLS=67.6.1 \
-  WHEEL=0.40.0 \
+  SETUPTOOLS=69.0.2 \
+  WHEEL=0.42.0 \
   PLONE_MAJOR=6.0 \
-  PLONE_VERSION=6.0.4
+  PLONE_VERSION=6.0.9
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -40,12 +40,12 @@ COPY --chown=imio templates /plone/templates
 RUN su -c "buildout -c prod.cfg -t 30 -N" -s /bin/sh imio
 
 FROM imiobe/base:py3-ubuntu-20.04
-ENV PIP=23.0.1 \
+ENV PIP=23.3.1 \
   ZC_BUILDOUT=3.0.1 \
-  SETUPTOOLS=67.6.1 \
-  WHEEL=0.40.0 \
+  SETUPTOOLS=69.0.2 \
+  WHEEL=0.42.0 \
   PLONE_MAJOR=6.0 \
-  PLONE_VERSION=6.0.4 \
+  PLONE_VERSION=6.0.9 \
   ZEO_HOST=db \
   ZEO_PORT=8100 \
   HOSTNAME_HOST=local \

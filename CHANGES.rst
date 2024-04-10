@@ -1,6 +1,9 @@
 1.3.6 (unreleased)
 ------------------
 
+- Update versions of setuptools, wheel, pip, Plone in Dockerfile
+  [boulch]
+
 - imio.directory.core 1.2.10
 
     - WEB-4095 : Use "|" separator instead of "," when exporting contacts to csv file
