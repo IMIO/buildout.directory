@@ -1,4 +1,4 @@
-1.3.6 (unreleased)
+1.3.6 (2024-04-14)
 ------------------
 
 - Update versions of setuptools, wheel, pip, Plone in Dockerfile
