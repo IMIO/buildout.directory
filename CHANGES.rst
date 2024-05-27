@@ -1,6 +1,11 @@
 1.3.7 (unreleased)
 ------------------
 
+- imio.directory.core 1.2.12
+
+    - Fix upgrade step
+      [boulch]
+
 - imio.smartweb.locales 1.1.9 => 1.1.18
 
     - Add missing FR translations
