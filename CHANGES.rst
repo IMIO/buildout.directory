@@ -1,7 +1,72 @@
 1.3.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.locales 1.1.9 => 1.1.18
+
+    - Add missing FR translations
+      [laulaz]
+
+- imio.directory.core 1.2.11
+
+    - WEB-4088 : Add some odwb endpoints (for contacts , for entities)
+      Cover use case for sending data in odwb for a staging environment
+      [boulch]
+
+    - Fix Topics in SearchableText translated indexes
+      [laulaz]
+
+- imio.smartweb.common 1.2.15
+
+    - Fix missing ZCML dependency
+      [laulaz]
+
+- imio.smartweb.common 1.2.14
+
+    - Fix bundles: Remove obsolete patterns bundle and fix a previous upgrade for
+      eea.facetednavigation
+      [laulaz]
+
+    - Fix translate call (was causing incorrect string in .po file)
+      [laulaz]
+
+    - Fix translation message string
+      [laulaz]
+
+- imio.smartweb.common 1.2.13
+
+    - WEB-4088 : Cover use case for sending data in odwb for a staging environment
+      [boulch]
+
+    - Ensure translation of vocabularies when used with `AjaxSelectFieldWidget`
+      [laulaz]
+
+    - Remove useless `container_uid` from `search-filters` results
+      [laulaz]
+
+    - WEB-3864 : Ensure that a taxonomy term that is deleted is not used anywhere
+      [boulch]
+
+    - WEB-3862 : Unpatch (restore original) eea.facetednavigation jquery
+      [laulaz]
+
+- imio.smartweb.common 1.2.12
+
+    - WEB-4102 : Add second skip to footer
+      [thomlamb]
+
+- imio.smartweb.common 1.2.11
+
+    - WEB-4101 : Fix vocabulary terms translation (for Topics only - for the moment)
+      when used with `AjaxSelectFieldWidget`
+      [laulaz]
+
+- imio.smartweb.common 1.2.10
+
+    - WEB-4101 : Change Topics field widget to keep value ordering
+      [laulaz]
+
+    - WEB-4088 : Implement some odwb utils and generic classes
+      [boulch]
 
 
 1.3.6 (2024-04-14)
