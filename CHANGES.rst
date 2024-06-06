@@ -1,7 +1,10 @@
 1.3.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.13
+
+    - Geocode contact only if longitude and latitude are empty on csv import
+      [laulaz, remdub]
 
 
 1.3.7 (2024-05-30)
