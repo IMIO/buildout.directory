@@ -1,7 +1,16 @@
 1.3.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.17
+
+    - WEB-4113 : Add `TranslatedAjaxSelectFieldWidget` to fix translations of initial
+      values in select2 fields
+      [laulaz]
+
+- imio.smartweb.common 1.2.16
+
+    - WEB-4107 : Update resource registries modification time (used as ETag) at Zope startup
+      [laulaz]
 
 
 1.3.8 (2024-06-06)
