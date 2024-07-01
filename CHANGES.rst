@@ -1,6 +1,20 @@
 1.3.10 (unreleased)
 -------------------
 
+- imio.directory.core 1.2.15
+
+    - WEB-4088 : Add after commit hook to reduce bad image upload to odwb because of the transaction speed
+      New contact hasn't time to go from private to published state ?!
+      [boulch]
+
+- imio.smartweb.common 1.2.18
+
+    - WEB-4088 : Refactor code for odwb staging availability
+      [boulch]
+
+    - GHA tests on Python 3.8 3.9 and 3.10
+      [remdub]
+
 - imio.directory.core 1.2.14
 
     - WEB-4088 : Rename some fields to match with odwb dataset
