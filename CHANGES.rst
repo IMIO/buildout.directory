@@ -1,7 +1,8 @@
 1.3.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Upgrade docker image to Ubuntu 22.04
+  [remdub]
 
 
 1.3.10 (2024-07-01)
