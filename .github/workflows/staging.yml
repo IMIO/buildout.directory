@@ -14,10 +14,12 @@ jobs:
     if: contains(github.event.head_commit.message, 'Back to development:') == false && contains(github.event.head_commit.message, 'Preparing release') == false
     steps:
       - name: Build push and notify
-        uses: IMIO/gha/build-push-notify@v1.1
+        uses: IMIO/gha/build-push-notify@v2.0
         with:
           IMAGE_NAME: ${{ vars.IMAGE_NAME }}
-          IMAGE_TAG: ${{ vars.IMAGE_TAG_STAGING }}
+          IMAGE_TAGS: |
+            ${{ secrets.HARBOR_URL }}/${{ vars.IMAGE_NAME }}:staging
+            ${{ secrets.HARBOR_URL }}/${{ vars.IMAGE_NAME }}:staging-${{ github.run_number }}
           REGISTRY_URL: ${{ secrets.HARBOR_URL }}
           REGISTRY_USERNAME: ${{ secrets.SMARTWEB_HARBOR_USERNAME }}
           REGISTRY_PASSWORD: ${{ secrets.SMARTWEB_HARBOR_PASSWORD }}
