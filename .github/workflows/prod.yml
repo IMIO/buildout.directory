@@ -17,7 +17,8 @@ jobs:
         with:
           IMAGE_NAME: ${{ vars.IMAGE_NAME }}
           IMAGE_TAG: ${{ vars.IMAGE_TAG_STAGING }}
-          NEW_IMAGE_TAG: ${{ vars.IMAGE_TAG_PRODUCTION }}
+          NEW_IMAGE_TAGS: |
+            ${{ vars.IMAGE_TAG_PRODUCTION }}
           REGISTRY_URL: ${{ secrets.HARBOR_URL }}
           REGISTRY_USERNAME: ${{ secrets.SMARTWEB_HARBOR_USERNAME }}
           REGISTRY_PASSWORD: ${{ secrets.SMARTWEB_HARBOR_PASSWORD }}
