@@ -1,8 +1,8 @@
 1.4.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Upgrade to Zope 5.9
+  [remdub]
 
 1.4 (2024-07-02)
 ----------------
