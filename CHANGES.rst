@@ -1,6 +1,9 @@
 1.4.2 (unreleased)
 ------------------
 
+- Sync gunicorn version with Plone 6.0.9
+  [remdub]
+
 - imio.directory.core 1.2.16
 
   - WEB-4027 : Add "Linkedin" as a new type of site term
