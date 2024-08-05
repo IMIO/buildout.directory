@@ -1,7 +1,13 @@
 1.4.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.16
+
+  - WEB-4027 : Add "Linkedin" as a new type of site term
+    [boulch]
+
+  - WEB-4088 : Fix missing include package .rest. we couldn't directly call @odwb endpoints.
+    [boulch]
 
 
 1.4.1 (2024-07-31)
