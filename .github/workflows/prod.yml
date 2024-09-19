@@ -9,8 +9,7 @@ jobs:
   tag:
     environment:
       name: production
-    runs-on:
-      group: self-hosted
+    runs-on: gha-runners-smartweb
     steps:
       - name: Tag and notify
         uses: IMIO/gha/tag-notify@v3.7.2
@@ -26,8 +25,7 @@ jobs:
   deploy:
     environment:
       name: production
-    runs-on:
-      group: self-hosted
+    runs-on: gha-runners-smartweb
     needs: [tag]
     steps:
       - name: Get tomorrow date

@@ -9,8 +9,7 @@ on:
 jobs:
   build-push:
     environment: staging
-    runs-on:
-      group: self-hosted
+    runs-on: gha-runners-smartweb
     if: contains(github.event.head_commit.message, 'Back to development:') == false && contains(github.event.head_commit.message, 'Preparing release') == false
     steps:
       - name: Build push and notify
@@ -27,8 +26,7 @@ jobs:
   deploy:
     environment:
       name: staging
-    runs-on:
-      group: self-hosted
+    runs-on: gha-runners-smartweb
     needs: build-push
     steps:
       - name: Deploy to staging and notify
