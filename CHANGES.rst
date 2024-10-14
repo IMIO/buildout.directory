@@ -1,4 +1,4 @@
-1.4.2 (unreleased)
+1.4.2 (2024-10-14)
 ------------------
 
 - Sync gunicorn version with Plone 6.0.9
