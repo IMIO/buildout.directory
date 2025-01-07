@@ -1,4 +1,4 @@
-1.4.3 (unreleased)
+1.4.3 (2025-01-07)
 ------------------
 
 - Increase gunicorn limit_request_line to allow long urls and avoid 400 errors
