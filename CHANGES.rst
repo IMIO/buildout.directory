@@ -1,6 +1,9 @@
 1.4.3 (unreleased)
 ------------------
 
+- Increase gunicorn limit_request_line to allow long urls and avoid 400 errors
+  [remdub]
+
 - imio.directory.core 1.2.17
 
   - WEB-4153 : Add a new cacheRuleset to use with our custom rest endpoints
