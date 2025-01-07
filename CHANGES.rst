@@ -1,7 +1,15 @@
 1.4.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.17
+
+  - WEB-4153 : Add a new cacheRuleset to use with our custom rest endpoints
+    [remdub]
+
+- imio.directory.policy 1.1.4
+
+  - WEB-4153: Set moderateCaching for imio.directory.core.rest
+    [remdub]
 
 
 1.4.3 (2025-01-07)
