@@ -1,7 +1,10 @@
 1.4.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.19
+
+    - WEB-4153 : Override @vocabularies endpoint to add a cache ruleset on it
+      [remdub]
 
 
 1.4.4 (2025-01-08)
