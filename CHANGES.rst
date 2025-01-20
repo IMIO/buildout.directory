@@ -1,7 +1,10 @@
 1.4.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.policy 1.1.5
+
+  - WEB-4153: Increase caching values
+    [remdub]
 
 
 1.4.4 (2025-01-08)
