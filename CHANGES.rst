@@ -1,4 +1,4 @@
-1.4.5 (unreleased)
+1.4.5 (2025-01-20)
 ------------------
 
 - imio.directory.policy 1.1.5
