@@ -1,8 +1,8 @@
 1.4.6 (unreleased)
 ------------------
 
-- Migrate to Plone 6.0.14
-  [boulch]
+- Migrate to Python 3.12, Plone 6.0.14
+  [boulch, remdub]
 
 - z3c.jbot 2.1
 
