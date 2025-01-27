@@ -1,6 +1,9 @@
 1.4.6 (unreleased)
 ------------------
 
+- Migrate to Plone 6.0.14
+  [boulch]
+
 - z3c.jbot 2.1
 
     - Fix error when Plone site is not yet set as in first index_html call on Zope
