@@ -1,7 +1,10 @@
 1.4.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.21
+
+    - Fix: Updated to align scale behavior with the fix in plone.scale ([commit a352815](https://github.com/plone/plone.scale/commit/a352815#diff-24f46fc714c6d36041bcea7e64a7d5aeceacd929eb802655276a1d8f4b4576f4R209))
+      [boulch]
 
 
 1.4.6 (2025-01-29)
