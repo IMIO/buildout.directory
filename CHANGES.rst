@@ -1,4 +1,4 @@
-1.4.7 (unreleased)
+1.4.7 (2025-02-02)
 ------------------
 
 - Set event log level to error in production configuration and debug in dev configuration
