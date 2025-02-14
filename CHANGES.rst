@@ -1,7 +1,10 @@
 1.4.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.22
+
+    - WEB-4153 : Ruleset plone.stableResource for image scales
+      [remdub]
 
 
 1.4.7 (2025-02-02)
