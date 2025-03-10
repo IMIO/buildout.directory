@@ -1,7 +1,15 @@
 1.4.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.24
+
+    - WEB-4232 : Refactoring of the code that prevents the deletion of a taxonomy term if it is used in at least one object
+      [boulch]
+
+- imio.smartweb.common 1.2.23
+
+    - WEB-3718 : Accessibility : Add aria-label for consent buttons
+      [boulch]
 
 
 1.4.8 (2025-02-24)
