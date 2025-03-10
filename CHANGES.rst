@@ -1,6 +1,12 @@
 1.4.9 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.25
+
+    - WEB-4232 : Fix JQuery.
+      Version 1.2.24 contained issues affecting the smooth running of the preventing deletion of a taxonomy term
+      [boulch]
+
 - imio.smartweb.common 1.2.24
 
     - WEB-4232 : Refactoring of the code that prevents the deletion of a taxonomy term if it is used in at least one object
