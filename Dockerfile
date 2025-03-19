@@ -36,7 +36,6 @@ WORKDIR /plone
 # COPY --chown=imio --from=docker-staging.imio.be/smartweb/directory:latest /plone/eggs/ /plone/eggs/
 COPY --chown=imio *.cfg /plone/
 COPY --chown=imio scripts /plone/scripts
-COPY --chown=imio templates /plone/templates
 RUN su -c "buildout -c prod.cfg -t 30 -N" -s /bin/sh imio
 
 FROM harbor.imio.be/common/plone-base:6.0.14

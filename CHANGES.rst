@@ -1,6 +1,11 @@
 1.4.9 (unreleased)
 ------------------
 
+- WEB-4226 : Use waitress instead of gunicorn
+  The issue leading to a high load with waitress has been fixed in waitress 3.0.1
+  See https://github.com/Pylons/waitress/pull/435
+  [remdub]
+
 - imio.smartweb.common 1.2.25
 
     - WEB-4232 : Fix JQuery.
