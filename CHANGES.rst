@@ -1,6 +1,24 @@
 1.4.9 (unreleased)
 ------------------
 
+- imio.directory.core 1.2.18
+
+    - Update Python classifiers to be compatible with Python 3.12
+      [remdub]
+
+    - Migrate to Plone 6.0.14
+      [boulch]
+
+- imio.smartweb.common 1.2.27
+
+    - WEB-4122 : Create adapter/validator to filter valid image mimetype in our solutions
+      [boulch]
+
+- imio.smartweb.common 1.2.26
+
+    - WEB-4212: Fixe i18n:domain for skip to content
+      [thomlamb]
+
 - WEB-4226 : Use waitress instead of gunicorn
   The issue leading to a high load with waitress has been fixed in waitress 3.0.1
   See https://github.com/Pylons/waitress/pull/435
