@@ -1,7 +1,37 @@
 1.4.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.19
+
+    - Upgrade dev environment to Plone 6.1-latest
+      [remdub]
+
+    - Add tests for Plone 6.1-latest and add Python 3.13
+      [remdub]
+
+- imio.directory.policy 1.1.7
+
+    - GHA tests on Python 3.10 3.11, 3.12 and 3.13
+      [remdub]
+
+    - Update Python classifiers to be compatible with Plone 6.1 and Python 3.13
+      [remdub]
+
+- imio.directory.policy 1.1.6
+
+    - Update Python classifiers to be compatible with Python 3.12
+      [remdub]
+
+    - Migrate to Plone 6.0.14
+      [boulch]
+
+- imio.smartweb.common 1.2.28
+
+    - Upgrade dev environment to Plone 6.1-latest
+      [remdub]
+
+    - Add tests for Plone 6.1-latest and add Python 3.13
+      [remdub]
 
 
 1.4.9 (2025-03-19)
