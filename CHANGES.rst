@@ -1,6 +1,20 @@
 1.4.10 (unreleased)
 -------------------
 
+- collective.schedulefield 1.1
+
+    - Update locales https://github.com/IMIO/collective.schedulefield/issues/3
+      [remdub]
+
+    - Add test environment using pytest, with test coverage reaching 80% https://github.com/IMIO/collective.schedulefield/issues/2
+      [remdub]
+
+    - Fix MultiSchedule viewlet https://github.com/IMIO/collective.schedulefield/issues/4
+      [remdub]
+
+    - Upgrade dev environment to Plone 6.1-latest
+      [remdub]
+
 - imio.directory.core 1.2.19
 
     - Upgrade dev environment to Plone 6.1-latest
