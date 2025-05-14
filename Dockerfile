@@ -1,12 +1,12 @@
-FROM harbor.imio.be/common/plone-base:6.0.14 AS builder
+FROM harbor.imio.be/common/plone-base:6.1.1 AS builder
 
 LABEL maintainer="Benoît Suttor <benoit.suttor@imio.be>"
-ENV PIP=24.3.1 \
-  ZC_BUILDOUT=3.3 \
-  SETUPTOOLS=75.6.0 \
+ENV PIP=25.0.1 \
+  ZC_BUILDOUT=4.1.4 \
+  SETUPTOOLS=75.8.2 \
   WHEEL=0.45.1 \
-  PLONE_MAJOR=6.0 \
-  PLONE_VERSION=6.0.14
+  PLONE_MAJOR=6.1 \
+  PLONE_VERSION=6.1.1
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -33,18 +33,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /plone
 
-# COPY --chown=imio --from=docker-staging.imio.be/smartweb/directory:latest /plone/eggs/ /plone/eggs/
 COPY --chown=imio *.cfg /plone/
 COPY --chown=imio scripts /plone/scripts
 RUN su -c "buildout -c prod.cfg -t 30 -N" -s /bin/sh imio
 
-FROM harbor.imio.be/common/plone-base:6.0.14
-ENV PIP=24.3.1 \
-  ZC_BUILDOUT=3.3 \
-  SETUPTOOLS=75.6.0 \
+FROM harbor.imio.be/common/plone-base:6.1.1
+ENV PIP=25.0.1 \
+  ZC_BUILDOUT=4.1.4 \
+  SETUPTOOLS=75.8.2 \
   WHEEL=0.45.1 \
-  PLONE_MAJOR=6.0 \
-  PLONE_VERSION=6.0.14 \
+  PLONE_MAJOR=6.1 \
+  PLONE_VERSION=6.1.1 \
   ZEO_HOST=db \
   ZEO_PORT=8100 \
   HOSTNAME_HOST=local \
