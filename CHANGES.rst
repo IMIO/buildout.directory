@@ -1,6 +1,11 @@
 1.4.10 (unreleased)
 -------------------
 
+- imio.smartweb.common 1.2.32
+
+    - WEB-4250 : Quick fix : Since Plone 6.1, AjaxSelectWidget is displaying in edit mode even if mode is "display"
+      [boulch]
+
 - imio.smartweb.locales 1.1.29
 
     - Update dev environment to Plone 6.1-latest
