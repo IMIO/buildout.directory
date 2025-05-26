@@ -1,6 +1,18 @@
 1.5.1 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.34
+
+    - WEB-4258 : Temporary CSS fix to unhide the "External link" tab when adding a new link.
+      This a temporary fix while waiting for a new release in imio_smartweb_themes
+      [remdub]
+
+- imio.smartweb.common 1.2.33
+
+    - WEB-4259 : Override plone.volto summary_serializer_metadata to solve a problem with new
+      metadata fields being added to the summary serializer and breaking our search endpoints
+      [bsuttor, remdub]
+
 - imio.smartweb.locales 1.1.30
 
     - WEB-4260 : Override default Plone translation for TinyMCE "Insert link"
