@@ -12,12 +12,13 @@ jobs:
       github_environment: production
       image_name: ${{ vars.IMAGE_NAME }}
       image_tag_staging: ${{ vars.IMAGE_TAG_STAGING }}
-      image_tag_production: ${{ vars.IMAGE_TAG_PRODUCTION }}
+      image_tag_production: 'testgha'
       rundeck_job_id: 5b7c2640-8494-4b52-b970-32745b326cd1
-      node_name: ${{ vars.NODE_NAME }}
+      node_name: 'centralizedsources001.staging.imio.be'
       runner_label: gha-runners-smartweb
       schedule_time: '03:00'
       service_name: ${{ vars.SERVICE_NAME }}
+    secrets:
       mattermost_webhook_url: ${{ secrets.SMARTWEB_MATTERMOST_WEBHOOK_URL }}
       registry_url: ${{ secrets.HARBOR_URL }}
       registry_username: ${{ secrets.SMARTWEB_HARBOR_USERNAME }}
