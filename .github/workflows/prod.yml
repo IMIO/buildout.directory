@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  tag:
+  promote-staging-to-production:
     uses: IMIO/gha-workflows/.github/workflows/promote-staging-to-production.yml@promote-staging-to-production
     with:
       github_environment: production
