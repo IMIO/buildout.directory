@@ -4,6 +4,12 @@ on:
     tags:
       - '**'
   workflow_dispatch:
+    inputs:
+      quick_release:
+        description: 'Quick release to production'
+        type: boolean
+        required: false
+        default: false
 
 jobs:
   promote-staging-to-production:
@@ -18,6 +24,7 @@ jobs:
       runner_label: gha-runners-smartweb
       schedule_time: '03:00'
       service_name: ${{ vars.SERVICE_NAME }}
+      quick_release: ${{ inputs.quick_release || false }}
     secrets:
       mattermost_webhook_url: ${{ secrets.SMARTWEB_MATTERMOST_WEBHOOK_URL }}
       registry_url: ${{ secrets.HARBOR_URL }}
