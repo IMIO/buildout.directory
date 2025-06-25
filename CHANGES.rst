@@ -1,7 +1,27 @@
 1.5.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.36
+
+    - WEB-4278 : Create translated (de) iam vocabulary for e-guichet (citizen project)
+      [boulch]
+
+    - WEB-4278 : Create translated (de) topics vocabulary for e-guichet (citizen project)
+      [boulch]
+
+    - WEB-4269 : Add Horizontal Rule option to the insert menu in TinyMCE
+      [remdub]
+
+- imio.directory.core 1.2.20
+
+    - WEB-4278 : Create translated (de) contact categories vocabulary for e-guichet (citizen project)
+      [boulch]
+
+    - WEB-4278 : Create translated (de) factilities vocabulary for e-guichet (citizen project)
+      [boulch]
+
+    - WEB-4278 : Create translated (de) contact types vocabulary for e-guichet (citizen project)
+      [boulch]
 
 
 1.5.1 (2025-05-26)
