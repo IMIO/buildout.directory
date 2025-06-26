@@ -13,16 +13,13 @@ on:
 
 jobs:
   promote-staging-to-production:
-    uses: IMIO/gha-workflows/.github/workflows/promote-staging-to-production.yml@52677f55dd458fe3736fc999cfdaacfca5bf0049
+    uses: IMIO/gha-workflows/.github/workflows/promote-staging-to-production.yml@65e35515ece838830a6272586394164f5986bb76
     with:
-      github_environment: production
       image_name: ${{ vars.IMAGE_NAME }}
-      image_tag_staging: ${{ vars.IMAGE_TAG_STAGING }}
+      image_tag_staging: '${{ vars.IMAGE_TAG_STAGING }}'
       image_tag_production: ${{ vars.IMAGE_TAG_PRODUCTION }}
       rundeck_job_id: ${{ vars.RUNDECK_JOB_ID }}
-      node_name: ${{ vars.NODE_NAME }}
       runner_label: gha-runners-smartweb
-      schedule_time: '03:00'
       service_name: ${{ vars.SERVICE_NAME }}
       quick_release: ${{ inputs.quick_release || false }}
     secrets:
