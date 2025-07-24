@@ -1,7 +1,7 @@
 1.5.3 (unreleased)
 ------------------
 
-- imio.directory.core 1.2.21
+- imio.directory.core 1.2.22
 
     - WEB-4286 : Fix geolocation for contacts with default coordinates
       [remdub]
