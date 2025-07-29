@@ -1,7 +1,20 @@
 1.5.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.23
+
+    - WEB-4265 : Add new terms in facilities vocabulary
+      [remdub]
+
+- imio.smartweb.locales 1.1.32
+
+    - Update translations
+      [remdub]
+
+- imio.smartweb.locales 1.1.31
+
+    - Add some translations for new smartweb site admin control panel
+      [boulch]
 
 
 1.5.3 (2025-07-24)
