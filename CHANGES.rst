@@ -1,7 +1,10 @@
 1.5.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.24
+
+    - WEB-4057 : Enhance ergonomics of the schedule field
+      [boulch]
 
 
 1.5.4 (2025-07-30)
