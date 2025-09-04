@@ -1,7 +1,10 @@
 1.6.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.25
+
+    - SUP-45951 : add review_state and url to csv export view
+      [remdub]
 
 
 1.6.0 (2025-08-29)
