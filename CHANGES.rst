@@ -1,6 +1,15 @@
 1.6.1 (unreleased)
 ------------------
 
+- pas.plugins.imio 3.0.0
+
+    - Rename views to legacy
+      So we avoid calling them by mistake.
+      [remdub]
+
+    - Remove usergroups_useroverview override
+      [remdub]
+
 - imio.directory.core 1.2.25
 
     - SUP-45951 : add review_state and url to csv export view
