@@ -1,6 +1,11 @@
 1.6.1 (unreleased)
 ------------------
 
+- pas.plugins.kimug 1.1.5
+
+    - Upgrade-step to clean authentic users
+      [remdub]
+
 - pas.plugins.imio 3.0.0
 
     - Rename views to legacy
