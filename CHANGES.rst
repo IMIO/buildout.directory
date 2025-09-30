@@ -1,6 +1,11 @@
 1.6.2 (unreleased)
 ------------------
 
+- pas.plugins.kimug 1.3.1
+
+    - Do not gave administrator role for users in group iA.Smartweb.
+      [bsuttor]
+
 - pas.plugins.kimug 1.3.0
 
     - Skip OIDC settings configuration when Plone site or OIDC plugin is unavailable
