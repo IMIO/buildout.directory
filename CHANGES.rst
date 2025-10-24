@@ -1,7 +1,8 @@
 1.6.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Migrate to Plone 6.1.3
+  [boulch]
 
 
 1.6.2 (2025-09-30)

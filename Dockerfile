@@ -1,12 +1,12 @@
-FROM harbor.imio.be/common/plone-base:6.1.1 AS builder
+FROM harbor.imio.be/common/plone-base:6.1.3 AS builder
 
 LABEL maintainer="Benoît Suttor <benoit.suttor@imio.be>"
 ENV PIP=25.0.1 \
-  ZC_BUILDOUT=4.1.4 \
-  SETUPTOOLS=75.8.2 \
+  ZC_BUILDOUT=4.1.12 \
+  SETUPTOOLS=80.9.0 \
   WHEEL=0.45.1 \
   PLONE_MAJOR=6.1 \
-  PLONE_VERSION=6.1.1
+  PLONE_VERSION=6.1.3
 
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -37,13 +37,13 @@ COPY --chown=imio *.cfg /plone/
 COPY --chown=imio scripts /plone/scripts
 RUN su -c "buildout -c prod.cfg -t 30 -N" -s /bin/sh imio
 
-FROM harbor.imio.be/common/plone-base:6.1.1
+FROM harbor.imio.be/common/plone-base:6.1.3
 ENV PIP=25.0.1 \
-  ZC_BUILDOUT=4.1.4 \
-  SETUPTOOLS=75.8.2 \
+  ZC_BUILDOUT=4.1.12 \
+  SETUPTOOLS=80.9.0 \
   WHEEL=0.45.1 \
   PLONE_MAJOR=6.1 \
-  PLONE_VERSION=6.1.1 \
+  PLONE_VERSION=6.1.3 \
   ZEO_HOST=db \
   ZEO_PORT=8100 \
   HOSTNAME_HOST=local \
