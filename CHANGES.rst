@@ -1,6 +1,24 @@
 1.6.3 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.39
+
+    - Migration to Plone 6.1.3
+      [boulch]
+
+- imio.smartweb.common 1.2.38
+
+    - @find : Process None value in a field or ["None", "other value"] for agatha stats
+      [boulch]
+
+    - Add plone.app.caching include for futur proofing override
+      [jchandelle]
+
+- imio.smartweb.common 1.2.37
+
+    Add new @find endpoint to find content in instance
+    [boulch]
+
 - Migrate to Plone 6.1.3
   [boulch]
 
