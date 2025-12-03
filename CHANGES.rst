@@ -1,17 +1,26 @@
 1.6.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.41
 
+    - IAK-77 : IPA : Change icon with omnia set
+      [thomlamb]
 
-1.6.4 (2025-11-05)
-------------------
+    - IAK-77 : IPA : Add new header to queries + some Refactoring
+      [boulch]
+
+    - IAK-77 : IPA : Add IA buttons to TinyMCE + fix payload
+      [boulch]
 
 - imio.smartweb.common 1.2.40
 
     - Catch Exception on geocoding to avoid blocking content creation
       if geopy service is down
       [remdub]
+
+
+1.6.4 (2025-11-05)
+------------------
 
 - pas.plugins.kimug 1.4.0
 
