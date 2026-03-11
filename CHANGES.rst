@@ -1,7 +1,8 @@
 1.6.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Upgrade buildout to Plone 6.1.4
+  [boulch]
 
 
 1.6.6 (2025-12-11)
