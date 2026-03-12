@@ -1,6 +1,31 @@
 1.6.7 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.42 => 1.2.47
+
+    - OIA-109 : OMNIA : Add some fields to check to be able to "CategorizeContent" with imio.directory.Contact
+      [boulch]
+
+- imio.directory.core 1.2.26
+
+    - OIA-109 : OMNIA : Add ia "CategorizeContent" on imio.directory.Contact
+      [boulch]
+
+    - Migrate to Plone 6.1.4
+      [boulch]
+
+    - WEB-4366 : Undo RAM caching to @search endpoint. (trying firstly on news)
+      [boulch]
+
+    - Restrict serializer to REST requests only Avoid custom contact serializer in the context of export/import
+      [boulch]
+
+    - WEB-4366 : Add RAM caching to @search endpoint. Try to reduce latency
+      [boulch]
+
+    - Migrate to Plone 6.1.3
+      [boulch]
+
 - Upgrade buildout to Plone 6.1.4
   [boulch]
 
