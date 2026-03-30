@@ -1,6 +1,22 @@
 1.6.7 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.49
+
+    - OIA-109 : OMNIA : Add custom logo for TinyMCE IA Accessible button
+      [thomlamb]
+
+- imio.smartweb.common 1.2.48
+
+    - WEB-3859 : "Instance-level cached" statics vocabularies
+      [boulch]
+
+    - Migrate to Plone 6.1.4
+      [boulch]
+
+    - OIA-109 : OMNIA : Improve handling of "Not enough content to categorize" message for imio.directory.Contact
+      [boulch]
+
 - WEB-4366 : Increase target number of objects in memory per cache
   [boulch]
 
