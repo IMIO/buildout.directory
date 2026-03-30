@@ -1,6 +1,9 @@
 1.6.7 (unreleased)
 ------------------
 
+- WEB-4366 : Increase target number of objects in memory per cache
+  [boulch]
+
 - imio.smartweb.common 1.2.42 => 1.2.47
 
     - OIA-109 : OMNIA : Add some fields to check to be able to "CategorizeContent" with imio.directory.Contact
