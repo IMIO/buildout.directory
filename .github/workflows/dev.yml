@@ -6,6 +6,10 @@ on:
     tags:
       - '!**'
   workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
   build-push:
     environment: dev
@@ -13,7 +17,7 @@ jobs:
     if: contains(github.event.head_commit.message, 'Back to development:') == false && contains(github.event.head_commit.message, 'Preparing release') == false
     steps:
       - name: Build push and notify
-        uses: IMIO/gha/build-push-notify@v3.9.3
+        uses: IMIO/gha/build-push-notify@v6
         with:
           IMAGE_NAME: ${{ vars.IMAGE_NAME }}
           IMAGE_TAGS: |
@@ -30,7 +34,7 @@ jobs:
     needs: build-push
     steps:
       - name: Deploy to dev and notify
-        uses: IMIO/gha/rundeck-notify@v3.9.3
+        uses: IMIO/gha/rundeck-notify@v6
         with:
           RUNDECK_URL: ${{ secrets.RUNDECK_URL }}
           RUNDECK_TOKEN: ${{ secrets.SMARTWEB_RUNDECK_TOKEN }}

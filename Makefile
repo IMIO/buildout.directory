@@ -28,6 +28,10 @@ upgrade-steps: ## Run upgrade steps
 lint: ## Run pre-commit hooks
 	uvx pre-commit run --all
 
+.PHONY: release
+release: ## Run full release with uvx zest.releaser
+	uvx --from zest.releaser fullrelease
+
 .venv:
 	@echo "Creating virtual environment with uv"
 	uv venv

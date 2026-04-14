@@ -4,16 +4,13 @@ on:
     tags:
       - '**'
   workflow_dispatch:
-    inputs:
-      quick_release:
-        description: 'Quick release to production'
-        type: boolean
-        required: false
-        default: false
+
+permissions:
+  contents: read
 
 jobs:
   promote-staging-to-production:
-    uses: IMIO/gha-workflows/.github/workflows/promote-staging-to-production.yml@65e35515ece838830a6272586394164f5986bb76
+    uses: IMIO/gha-workflows/.github/workflows/promote-staging-to-production.yml@v1
     with:
       image_name: ${{ vars.IMAGE_NAME }}
       image_tag_staging: '${{ vars.IMAGE_TAG_STAGING }}'
@@ -21,7 +18,7 @@ jobs:
       rundeck_job_id: ${{ vars.RUNDECK_JOB_ID }}
       runner_label: gha-runners-smartweb
       service_name: ${{ vars.SERVICE_NAME }}
-      quick_release: ${{ inputs.quick_release || false }}
+      quick_release: ${{ endsWith(github.ref_name, '-quick') }}
     secrets:
       mattermost_webhook_url: ${{ secrets.SMARTWEB_MATTERMOST_WEBHOOK_URL }}
       registry_url: ${{ secrets.HARBOR_URL }}
