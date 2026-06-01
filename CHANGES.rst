@@ -1,4 +1,4 @@
-1.6.9 (unreleased)
+1.6.9 (2026-06-01)
 ------------------
 
 - CITIBDC-592 : Add collective.exportimport to eggs
