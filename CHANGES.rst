@@ -1,6 +1,11 @@
 1.6.10 (unreleased)
 -------------------
 
+- pas.plugins.kimug 1.5.3
+
+  - Add ``is_log_active`` utility function to check if plugin logging is enabled via the registry.
+    [remdub]
+
 - pas.plugins.kimug 1.5.2
 
     - ``get_keycloak_users_from_oidc_sso_apps`` now includes SSO apps users that are
