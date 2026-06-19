@@ -1,7 +1,19 @@
 1.6.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.directory.policy 1.1.9
+
+    - Drop support for Python 3.10 and 3.11
+      [remdub]
+
+    - KEYC-77: Remove pas.plugins.imio from dependencies
+      [remdub]
+
+    - Add demo profile
+      [boulch]
+
+    - Migrate to Plone 6.1.3
+      [boulch]
 
 
 1.6.12-quick (2026-06-18)
