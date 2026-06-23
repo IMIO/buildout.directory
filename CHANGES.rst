@@ -1,6 +1,12 @@
 1.6.13 (unreleased)
 -------------------
 
+- pas.plugins.kimug 1.8.0
+
+  - WEB-4448: Add Kimug Authenticated Users role and grant it to plugin-created users
+    (new users on creation, existing users via the 1006→1007 upgrade step).
+    [boulch, remdub]
+
 - imio.directory.policy 1.1.9
 
     - Drop support for Python 3.10 and 3.11
@@ -35,7 +41,7 @@
       WAF rejects with `403 Forbidden`, breaking Bearer-token verification. Each
       JWKS client is now built with `User-Agent: pas.plugins.kimug`.
       [bsuttor]
-  
+
 
 1.6.10 (2026-06-17)
 -------------------
