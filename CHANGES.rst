@@ -1,7 +1,9 @@
 1.6.14 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Security fixes in plone.app.contenttypes, plone.app.dexterity, plone.app.event,
+  plone.app.portlets, RestrictedPython, plone.app.textfield, plone.restapi
+  [remdub]
 
 
 1.6.13 (2026-06-23)
