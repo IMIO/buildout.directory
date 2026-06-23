@@ -1,6 +1,16 @@
 1.6.13 (unreleased)
 -------------------
 
+- imio.smartweb.common 1.2.55
+
+    - Resolve the directory base URL for the remote entities vocabulary from the
+      ``imio.smartweb.common.directory_url`` registry record (falls back to the
+      ``DIRECTORY_URL`` env var / default).
+      [boulch]
+
+    - Reduce ``@search`` ``b_size`` to 3000.
+      [boulch]
+
 - pas.plugins.kimug 1.8.0
 
   - WEB-4448: Add Kimug Authenticated Users role and grant it to plugin-created users
