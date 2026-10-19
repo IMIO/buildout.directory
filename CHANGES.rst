@@ -1,7 +1,92 @@
 1.6.17 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.61
+
+    - ODWB : add ``odwb_send`` to send items by batches (push or delete) and
+      return a sending summary (service, total, sent, batches).
+      [boulch]
+
+    - Add ``imio.smartweb.common.sso``: ``get_sso_auth_header()`` gives the
+      ``Authorization`` header to call another iMio application. It is a Keycloak
+      (sso-apps) token, kept in cache until it expires, or a basic auth fallback
+      (``SSO_APPS_USER_USERNAME`` / ``SSO_APPS_USER_PASSWORD``) when the SSO config is
+      not complete (local development). Also add ``basic_auth_header()``.
+      [boulch]
+
+    - ODWB : add ``odwb_post`` returning ODWB status code and response text
+      (``status_code`` is None when ODWB is unreachable). ``odwb_query`` is unchanged.
+      [boulch]
+
+    - Security: restrict ``@find`` endpoint. Only read catalog columns
+      or dexterity schema fields: field names given by the client are never called
+      anymore (brains acquire from ``portal_catalog``, so any zero-argument method of
+      the object or of the catalog could be triggered) and private names (``_*``)
+      are ignored or rejected.
+      [boulch]
+
+    - @find (type_of_request=catalog): add ``_group_by`` (``ancestor_type`` or
+      ``field``) and ``_aggregate`` (``list``, ``count``, ``distinct_count``)
+      special parameters to group and aggregate catalog results
+      [boulch]
+
+    - Add an AI button below the lead image caption field.
+      The button shows only when the caption field is visible (text sections).
+      The button sends the image to the new ``@@process-image-metadata`` view.
+      The view sends the image to the Omnia ``deduce-metadata`` agent.
+      The button writes the title of the result in the caption field.
+      [boulch]
+
+    - Add an upgrade step (1044 to 1045) to register the ``ia_image_metadata.js``
+      bundle.
+      [boulch]
+
+    - Refactor : Add get_image_file function. This function returns the
+      image of an object in the format of deduce_metadata.
+      [boulch]
+
+- imio.smartweb.common 1.2.60
+
+    - WEBBDC-2790 : Move the remote directory contact vocabulary, the ``Choice``/ajax-select
+      converter, the two proxy views (``@@directory_contact_info`` and
+      ``@@directory_entities_info``) and the contact autofill script here from
+      ``imio.events.core``, so both ``imio.events.core`` and ``imio.news.core`` can share
+      them. ``get_directory_url()`` is now used by every caller, so the
+      ``imio.smartweb.common.directory_url`` registry override is honoured consistently.
+      [boulch]
+
+    - WEB-4485 : Restore the ``plone.content_css`` purge lost in 1.2.29, which let the
+      TinyMCE ``importcss`` plugin re-add the barceloneta ``.highlight-inline`` and
+      ``p.highlight-paragraph`` styles to the Formats menu.
+      [boulch]
+
+- imio.smartweb.common 1.2.59
+
+    - WEB-4461 : Add a "Save and publish" button on the add and edit forms, enabled per content
+      type through the new ``imio.smartweb.save_and_publish`` behavior. The button is
+      only offered to users who may actually publish: on the add form the workflow
+      guard is checked against the container, so an editor without the publication
+      permission never sees the button
+      [boulch]
+
+- imio.smartweb.common 1.2.58
+
+    - Remove the ``TokenAuthCoreAPIService`` adapter (WEB-4373 workaround): since
+      imio.omnia.core 1.0 (OIA-241) the Omnia Core API authenticates itself with a
+      Keycloak SSO-Apps token, and authlib overwrites the ``Authorization`` header
+      we injected, so the adapter only spent an extra ``imio.helpers.ws``
+      token round-trip per request. Drops the ``imio.helpers`` dependency and
+      requires ``imio.omnia.core >= 1.0``.
+      [boulch]
+
+    - Cache (per language) the remote directory entities vocabulary for 300s
+      Memoize the German topics and iam vocabularies
+      [boulch]
+
+    - Fix registry export (control panel / GenericSetup) crashing with
+      ``TypeError: Argument must be bytes or unicode, got 'NoneType'`` on
+      interface-aware records without a fieldName (e.g. ``smartweb.icon.*``)
+      [boulch]
 
 
 1.6.16 (2026-07-26)
