@@ -1,6 +1,36 @@
 1.6.17 (unreleased)
 -------------------
 
+- imio.directory.core 1.2.28
+
+    - ODWB (security) : ``@odwb`` and ``@odwb_entities`` now require ``cmf.ManagePortal``. 
+      And non-published contact is never sent by ``@odwb``.
+      [boulch]
+
+    - ODWB : send contact keywords (``subjects``) as a list.
+      [boulch]
+
+    - ODWB : use ``odwb_send`` from imio.smartweb.common to send by batches.
+      [boulch]
+
+    - ODWB contact delete now uses ``odwb_post`` (timeout, error handling) and
+      returns the same sending summary as ``@odwb``.
+      [boulch]
+
+    - ``@odwb_entities`` now sends by batches and returns the same sending summary
+      as ``@odwb``.
+      [boulch]
+
+    - ``@odwb`` now returns a sending summary (service, total, sent, and per batch
+      size / ODWB status code / response) instead of the last ODWB response text.
+      Fix crash when there is no contact to send. Fix logger name.
+      Requires imio.smartweb.common with ``odwb_post``.
+      [boulch]
+
+    - WEB-4449 : Add local categories on entities and a local category on contacts.
+      Send local category (token / title) to ODWB.
+      [boulch]
+
 - imio.smartweb.common 1.2.61
 
     - ODWB : add ``odwb_send`` to send items by batches (push or delete) and
