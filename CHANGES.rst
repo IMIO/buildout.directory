@@ -1,6 +1,11 @@
 1.6.17 (unreleased)
 -------------------
 
+- imio.directory.core 1.2.29
+
+    - WEB-4504 : Remove useless term in facilities vocabulary
+      [boulch]
+
 - imio.directory.core 1.2.28
 
     - ODWB (security) : ``@odwb`` and ``@odwb_entities`` now require ``cmf.ManagePortal``. 
