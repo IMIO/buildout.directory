@@ -1,7 +1,38 @@
 1.6.18 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.directory.core 1.2.30
+
+    - Add ``@search_generation`` endpoint. it gives the generation of the ``@search`` results for one entity.
+      The generation changes when the cache of ``@search`` is cleared for this entity.
+      imio.smartweb.core can then keep the contacts in its cache and ask for them again
+      only when they change. The answer is small and is never cached (``Cache-Control: no-store``).
+      [boulch]
+
+    - ``@search`` endpoint : RAM cache of the results for the contacts of one entity
+      (``selected_entities`` parameter with one UID), for anonymous users only.
+      A change on a contact (or on the ``populating_entities`` of an entity) clears the cache
+      of its entity. The cache can be disabled with the
+      ``imio.directory.core.search_cache_enabled`` registry record.
+      [boulch]
+
+    - ``@search`` endpoint : the ``Last-Modified`` header and the ETag now use the time of the
+      last change in the contacts of the entity (``selected_entities`` parameter with one UID).
+      Before, they used the modification date of the site. Varnish then always got a 304
+      and kept the old results. When the entity is not known, no 304 is sent.
+      [boulch]
+
+    - ``@search`` endpoint : a change on a contact now also clears the cache of the entities
+      that show this contact (``selected_entities``), also after a move.
+      [boulch]
+
+    - ``@search`` endpoint : after the commit of a change in the contacts, send a BAN of
+      ``@search`` to the Varnish servers (``CACHING_SERVERS``). The clients get the new results
+      at once, not after the end of the Varnish TTL. Send the BAN only one time for each
+      transaction, and not when the transaction fails.
+      Requires imio.smartweb.common >= 1.2.62 (``ban_physicalpath`` sends the BAN after the
+      commit).
+      [boulch]
 
 
 1.6.17 (2026-10-20)
