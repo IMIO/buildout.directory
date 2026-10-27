@@ -1,6 +1,28 @@
 1.6.18 (unreleased)
 -------------------
 
+imio.smartweb.common 1.2.63
+
+    - WEB-4404 : Add a ``lastBan`` ETag component, the time of the site's last
+      BAN. A BAN (message, footer, hero banner) now changes the pages ETag, so
+      browsers get the new page instead of a 304.
+      [remdub]
+
+imio.smartweb.common 1.2.62
+
+    - ODWB : hide the push key in logs (sent url and connection / timeout errors).
+      [remdub]
+
+    - WEB-4404 : Send BAN requests to the caching servers after the transaction
+      commit. A page requested between the BAN and the commit was cached again
+      with the old content (e.g. a message not yet (de)activated).
+      [remdub]
+
+    - WEB-4404 : Add a timeout on BAN requests (``BAN_TIMEOUT``, 5 s) so an
+      unreachable caching server can't block the save. A failing server is logged
+      and the next ones are still banned.
+      [remdub]
+
 - imio.directory.core 1.2.30
 
     - Add ``@search_generation`` endpoint. it gives the generation of the ``@search`` results for one entity.
