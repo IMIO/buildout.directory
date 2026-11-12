@@ -1,6 +1,9 @@
 1.6.19 (unreleased)
 -------------------
 
+- WEB-4531 : Plone security fix 20261110
+  [remdub, boulch]
+
 - imio.smartweb.common 1.2.65
 
     - Add ``@vocabulary-translations/<vocabulary_name>`` endpoint.
