@@ -1,7 +1,29 @@
 1.6.19 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.65
+
+    - Add ``@vocabulary-translations/<vocabulary_name>`` endpoint.
+      It gives the token and the title in fr, nl, de and en of each term of a vocabulary.
+      [boulch]
+
+    - WEB-4530 : Load the "JavaScript integration (head)" snippet through
+      ``@@get_analytics``, after cookie consent, like the footer one. It was
+      rendered in the page head, so trackers pasted there ran before consent.
+      [remdub]
+
+- imio.smartweb.common 1.2.64
+
+    - WEB-4507 : Fix the ``started_zope`` startup subscriber: commit the resource
+      registry mtime update, which was never saved, so the ``resourceRegistries``
+      ETag changes at each instance restart. Close the ZODB connection it opened,
+      which stayed idle in transaction on PostgreSQL for the whole process lifetime.
+      [remdub]
+
+- imio.directory.core 1.2.31
+
+    - WEB-4520 : Fix HTTP 500 when you click "Categorize with AI" on a new contact.
+      [boulch]
 
 
 1.6.18 (2026-10-27)
