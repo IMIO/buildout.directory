@@ -1,7 +1,9 @@
 1.6.20 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-4533 : Plone 6.2.3 migration. Extend the Plone 6.2.3 pins and the
+  ``plone62`` branch of buildout.smartweb.
+  [boulch]
 
 
 1.6.19 (2026-11-12)
