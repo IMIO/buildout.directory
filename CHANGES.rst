@@ -5,6 +5,19 @@
   ``plone62`` branch of buildout.smartweb.
   [boulch]
 
+- WEB-4533 : Add ``make test``: build the production image, boot it with Postgres, Solr and
+  memcached, and run smoke tests (``IMIO/gha`` ``plone-image-test-notify`` checks plus
+  ``tests/test_directory.py``). CI runs them on pull requests. ``plone62.yml`` builds the
+  ``plone62`` image, tests it and only then tags it ``:plone62``. Add the Plone 6.2
+  migration guide (``docs/plone62-migration.md``)
+  [remdub]
+
+- WEB-4533 : Stop checking out collective.messagesviewlet (its ``plone62`` branch was
+  deleted once merged, so the image no longer built), imio.smartweb.locales (and remove its
+  1.1.32 pin), collective.timedevents and imio.gdpr: use the native 2.0.0 releases that
+  buildout.smartweb pins
+  [remdub]
+
 
 1.6.19 (2026-11-12)
 -------------------
