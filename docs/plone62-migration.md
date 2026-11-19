@@ -13,9 +13,11 @@ Last updated: 2026-11-19.
 
 ## Status
 
-**16 packages**: **4 done** (released, pinned, no longer checked out) · **1
+**17 packages**: **4 done** (released, pinned, no longer checked out) · **1
 released and pinned**, still checked out by `dev.cfg` (pas.plugins.kimug) ·
 **2 merged**, not released · **5 PRs open** · **4 branches pushed**, no PR yet
+· **1 not started** (collective.schedulefield: still old-style, doesn't block
+Plone 6.2.3)
 
 ✅ done · ⬜ to do · ➖ not applicable · 🚧 its pinned release calls
 `pkg_resources` and fails on Plone 6.2.3
@@ -32,6 +34,7 @@ released and pinned**, still checked out by `dev.cfg` (pas.plugins.kimug) ·
 | [collective.exportimport](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveexportimport) 🚧 | dev, prod | `plone62` | [#287](https://github.com/collective/collective.exportimport/pull/287) (draft) | ⬜ | ⬜ | ⬜ |
 | [collective.fingerpointing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivefingerpointing) 🚧 | dev, prod | `master` | [#110](https://github.com/collective/collective.fingerpointing/pull/110) | ✅ | ⬜ | ⬜ |
 | [collective.privacy](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveprivacy) 🚧 | dev, prod | `plone62` | [#22](https://github.com/collective/collective.privacy/pull/22) | ⬜ | ⬜ | ⬜ |
+| [collective.schedulefield](#collectiveschedulefield) | ➖ | ➖ | ⬜ | ⬜ | ⬜ | ⬜ |
 | [collective.upgrade](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveupgrade) | dev, prod | `plone61` | [#20](https://github.com/collective/collective.upgrade/pull/20) | ⬜ | ⬜ | ➖ |
 | [collective.messagesviewlet](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivemessagesviewlet) | ➖ | ➖ | [#24](https://github.com/collective/collective.messagesviewlet/pull/24) | ✅ | 2.0.0 | ✅ |
 | [collective.timedevents](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivetimedevents) | ➖ | ➖ | [#13](https://github.com/collective/collective.timedevents/pull/13) | ✅ | 2.0.0 | ✅ |
@@ -43,19 +46,21 @@ Columns:
 
 - **Checked out by**: the `auto-checkout` of `dev.cfg` (dev) and `prod.cfg`
   (prod, so the Docker image). A package checked out by prod only runs as a
-  release on a dev instance. ➖: no longer checked out, the pinned release is
-  used.
+  release on a dev instance. ➖: not checked out (no longer, or never), the
+  pinned release is used.
 - **Branch**: the branch mr.developer checks out. It comes from this
   repository's `sources.cfg` for imio.directory.core, imio.directory.policy,
   imio.smartweb.common, collective.upgrade and pas.plugins.kimug, and from
-  buildout.smartweb's `sources.cfg` for the others.
+  buildout.smartweb's `sources.cfg` for the others. ➖: not checked out.
 - **PR**: the pull request that merges the native branch. ⬜: none opened yet.
 - **Released**: the native version on PyPI. **Pinned**: a `versions.cfg`
   (this one or buildout.smartweb's) pins it. ➖: collective.upgrade is never
   pinned, every config checks it out.
 
-Each row links to the package's details in the SmartWeb guide, except the two
-Directory packages, [described below](#imiodirectorycore-and-imiodirectorypolicy).
+Each row links to the package's details in the SmartWeb guide, except the
+three packages only Directory uses, described below:
+[imio.directory.core and imio.directory.policy](#imiodirectorycore-and-imiodirectorypolicy),
+and [collective.schedulefield](#collectiveschedulefield).
 
 ## What's left
 
@@ -73,6 +78,16 @@ Directory packages, [described below](#imiodirectorycore-and-imiodirectorypolicy
 
 The PRs of the shared packages are tracked in the
 [SmartWeb guide](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#open-pull-requests).
+
+### Not started
+
+- [ ] collective.schedulefield: still old-style
+  ([details](#collectiveschedulefield)). It doesn't block Plone 6.2.3, but
+  it is one of the old-style packages that keep horse-with-no-namespace in
+  `base.cfg`. IMIO owns the repository, so there is no upstream to wait for:
+  branch `plone62` off `master`, apply the
+  [migration recipe](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#the-migration-recipe)
+  (setup.py variant), and open a PR.
 
 ### Clean up the checkouts
 
@@ -103,14 +118,15 @@ git branch, so the order matters:
 - [ ] The shared packages first, in the order of the
   [SmartWeb guide](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#release),
   imio.smartweb.common included.
+- [ ] collective.schedulefield, as 2.0.0: it drops Plone 6.0 and 6.1.
 - [ ] imio.directory.core, then imio.directory.policy (it requires
   imio.directory.core). Release them as 2.0.0, as the SmartWeb guide does
   for the other packages: they drop Plone 6.1. Their `CHANGES.rst` still says
   1.2.31 (already released from `main`) and 1.1.10.
 - [ ] Pin each native release in `versions.cfg`, replacing the old-style
   pins (imio.directory.core 1.2.31, imio.directory.policy 1.1.9,
-  imio.smartweb.common 1.2.65). Then drop the checkout and the `sources.cfg`
-  line.
+  imio.smartweb.common 1.2.65, collective.schedulefield 1.1). Then drop the
+  checkouts and their `sources.cfg` lines.
 
 ### Check by hand on a Directory site
 
@@ -208,6 +224,28 @@ commits ahead of `main`; imio.directory.core's is also 2 commits behind (the
   collective.behavior.talcondition, collective.privacy, and
   collective.timedevents for the policy).
 - Classifiers: Plone 6.2 only, and Python 3.14, which the CI matrix now tests.
+
+## collective.schedulefield
+
+**Namespace** `collective` · **Repository**
+[IMIO/collective.schedulefield](https://github.com/IMIO/collective.schedulefield),
+branch `master` · **Variant**
+[setup.py](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#the-migration-recipe)
+· **Checked out by** none · **Required by** imio.directory.core (the contact
+opening hours)
+
+Not started: still old-style, but it doesn't block Plone 6.2.3.
+
+- The 1.1 release that `versions.cfg` pins calls `pkg_resources` only in
+  `collective/__init__.py`, to declare the namespace. horse-with-no-namespace's
+  stub answers that call, so 1.1 imports on Plone 6.2.3 and nothing forced a
+  checkout.
+- The SmartWeb guide doesn't list it, because SmartWeb doesn't use it: only
+  imio.directory.core requires it, and only this repository pins it.
+- `master` is 1.1.1.dev0, still with `namespace_packages=["collective"]` and
+  the Plone 6.0 and 6.1 classifiers. There is no `plone62` branch. The last
+  merged PR is [#5](https://github.com/IMIO/collective.schedulefield/pull/5)
+  (Plone 6.1 compatibility, May 2025).
 
 ## Testing
 
