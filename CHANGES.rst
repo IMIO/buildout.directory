@@ -23,6 +23,10 @@
   once merged
   [remdub]
 
+- WEB-4533 : Stop checking out collective.fingerpointing and collective.privacy. Use the
+  native 2.0.0 releases that buildout.smartweb pins
+  [boulch]
+
 
 1.6.19 (2026-11-12)
 -------------------
