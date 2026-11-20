@@ -13,10 +13,11 @@ Last updated: 2026-11-20.
 
 ## Status
 
-**17 packages**: **6 done** (released, pinned, no longer checked out) · **4
+**17 packages**: **7 done** (released, pinned, no longer checked out) · **4
 released and pinned**, still checked out by `dev.cfg` (imio.directory.core,
-imio.directory.policy, imio.smartweb.common, pas.plugins.kimug) · **1
-merged**, not released · **3 PRs open** · **2 branches pushed**, no PR yet · **1 not started** (collective.schedulefield: still old-style, doesn't block
+imio.directory.policy, imio.smartweb.common, pas.plugins.kimug) · **3
+merged**, not released · **1 PR open** · **1 branch pushed**, no PR yet ·
+**1 not started** (collective.schedulefield: still old-style, doesn't block
 Plone 6.2.3)
 
 ✅ done · ⬜ to do · ➖ not applicable · 🚧 its pinned release calls
@@ -26,11 +27,11 @@ Plone 6.2.3)
 |---|:-:|:-:|:-:|:-:|:-:|:-:|
 | [imio.helpers](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiohelpers) 🚧 | dev, prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
 | [imio.pyutils](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiopyutils) | dev, prod | `master` | [#4](https://github.com/IMIO/imio.pyutils/pull/4) | ✅ | ⬜ | ⬜ |
-| [collective.autopublishing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveautopublishing) | prod | `plone62` | [#12](https://github.com/collective/collective.autopublishing/pull/12) | ⬜ | ⬜ | ⬜ |
-| [collective.behavior.talcondition](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivebehaviortalcondition) | dev, prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
+| [collective.autopublishing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveautopublishing) | prod | `master` | [#12](https://github.com/collective/collective.autopublishing/pull/12) | ✅ | ⬜ | ⬜ |
 | [collective.exportimport](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveexportimport) 🚧 | dev, prod | `plone62` | [#287](https://github.com/collective/collective.exportimport/pull/287) (draft) | ⬜ | ⬜ | ⬜ |
 | [collective.schedulefield](#collectiveschedulefield) | ➖ | ➖ | ⬜ | ⬜ | ⬜ | ⬜ |
-| [collective.upgrade](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveupgrade) | dev, prod | `plone61` | [#20](https://github.com/collective/collective.upgrade/pull/20) | ⬜ | ⬜ | ➖ |
+| [collective.upgrade](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveupgrade) | dev, prod | `master` | [#20](https://github.com/collective/collective.upgrade/pull/20) | ✅ | ⬜ | ➖ |
+| [collective.behavior.talcondition](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivebehaviortalcondition) | ➖ | ➖ | [#17](https://github.com/collective/collective.behavior.talcondition/pull/17) | ✅ | 2.0.0 | ✅ |
 | [collective.fingerpointing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivefingerpointing) | ➖ | ➖ | [#110](https://github.com/collective/collective.fingerpointing/pull/110) | ✅ | 2.0.0 | ✅ |
 | [collective.messagesviewlet](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivemessagesviewlet) | ➖ | ➖ | [#24](https://github.com/collective/collective.messagesviewlet/pull/24) | ✅ | 2.0.0 | ✅ |
 | [collective.privacy](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveprivacy) | ➖ | ➖ | [#22](https://github.com/collective/collective.privacy/pull/22) | ✅ | 2.0.0 | ✅ |
@@ -50,9 +51,9 @@ Columns:
   pinned release in the image. ➖: not checked out (no longer, or never), the
   pinned release is used.
 - **Branch**: the branch mr.developer checks out. It comes from this
-  repository's `sources.cfg` for imio.directory.core, imio.directory.policy,
-  collective.upgrade and pas.plugins.kimug, and from buildout.smartweb's
-  `sources.cfg` for the others. ➖: not checked out.
+  repository's `sources.cfg` for imio.directory.core, imio.directory.policy
+  and pas.plugins.kimug, and from buildout.smartweb's `sources.cfg` for the
+  others. ➖: not checked out.
 - **PR**: the pull request that merges the native branch. ⬜: none opened yet.
 - **Released**: the native version on PyPI. **Pinned**: a `versions.cfg`
   (this one or buildout.smartweb's) pins it. ➖: collective.upgrade is never
@@ -129,6 +130,15 @@ The PRs of the shared packages are tracked in the
 - [x] collective.fingerpointing and collective.privacy: dropped from
   `auto-checkout` (2026-11-20). buildout.smartweb pins their native 2.0.0,
   which no longer calls `pkg_resources`.
+- [x] collective.behavior.talcondition: dropped from `auto-checkout`
+  (2026-11-20). buildout.smartweb pins its native 2.0.0, and its `plone62`
+  branch was deleted once
+  [#17](https://github.com/collective/collective.behavior.talcondition/pull/17)
+  was merged.
+- [x] collective.upgrade: this repository's `sources.cfg` no longer checks it
+  out from `plone61` (2026-11-20). It now comes from `master`, the branch
+  buildout.smartweb's `sources.cfg` names, which contains `plone61` since
+  [#20](https://github.com/collective/collective.upgrade/pull/20) was merged.
 - [ ] pas.plugins.kimug: drop it from `dev.cfg`, and its line from
   `sources.cfg`, unless you are working on it. buildout.smartweb pins 2.0.0.
 - [ ] Make `dev.cfg` and `prod.cfg` check out the same packages. Today only
@@ -144,8 +154,9 @@ git branch, so the order matters:
 
 - [ ] The shared packages first, in the order of the
   [SmartWeb guide](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#release).
-  imio.smartweb.common is done: 2.0.0 is released and pinned in
-  `versions.cfg`.
+  imio.smartweb.common and collective.behavior.talcondition are done: their
+  2.0.0 is released and pinned (imio.smartweb.common in `versions.cfg`,
+  collective.behavior.talcondition by buildout.smartweb).
 - [ ] collective.schedulefield, as 2.0.0: it drops Plone 6.0 and 6.1.
 - [x] imio.directory.core and imio.directory.policy: 2.0.0 released and
   pinned in `versions.cfg` (2026-11-20). `dev.cfg` still checks them out,
@@ -237,6 +248,13 @@ of 1.2.65. A dev instance checks out `main`
 
 collective.fingerpointing and collective.privacy: both now come from the
 native 2.0.0 releases that buildout.smartweb pins.
+
+collective.behavior.talcondition: it now comes from the native 2.0.0 release
+that buildout.smartweb pins.
+
+collective.upgrade is still checked out, but from `master`, as in
+buildout.smartweb: this repository's `sources.cfg` no longer overrides its
+branch.
 
 imio.directory.core and imio.directory.policy, from `prod.cfg` only: the
 image installs the native 2.0.0, which `versions.cfg` pins in place of

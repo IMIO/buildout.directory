@@ -31,6 +31,11 @@
   namespace). The image no longer checks them out, and dev checks them out from ``main``
   [boulch]
 
+- WEB-4533 : Stop checking out collective.behavior.talcondition: use the native 2.0.0
+  release that buildout.smartweb pins. Check out collective.upgrade from ``master``, as
+  buildout.smartweb does: ``plone61`` is merged into it
+  [remdub]
+
 
 1.6.19 (2026-11-12)
 -------------------
