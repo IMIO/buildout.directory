@@ -27,6 +27,10 @@
   native 2.0.0 releases that buildout.smartweb pins
   [boulch]
 
+- WEB-4533 : Pin imio.directory.core 2.0.0 and imio.directory.policy 2.0.0 (native
+  namespace). The image no longer checks them out, and dev checks them out from ``main``
+  [boulch]
+
 
 1.6.19 (2026-11-12)
 -------------------

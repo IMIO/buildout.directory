@@ -13,10 +13,10 @@ Last updated: 2026-11-20.
 
 ## Status
 
-**17 packages**: **6 done** (released, pinned, no longer checked out) · **2
-released and pinned**, still checked out by `dev.cfg` (imio.smartweb.common,
-pas.plugins.kimug) · **1 merged**, not released · **3 PRs open** · **4
-branches pushed**, no PR yet · **1 not started** (collective.schedulefield: still old-style, doesn't block
+**17 packages**: **6 done** (released, pinned, no longer checked out) · **4
+released and pinned**, still checked out by `dev.cfg` (imio.directory.core,
+imio.directory.policy, imio.smartweb.common, pas.plugins.kimug) · **1
+merged**, not released · **3 PRs open** · **2 branches pushed**, no PR yet · **1 not started** (collective.schedulefield: still old-style, doesn't block
 Plone 6.2.3)
 
 ✅ done · ⬜ to do · ➖ not applicable · 🚧 its pinned release calls
@@ -24,8 +24,6 @@ Plone 6.2.3)
 
 | Package | Checked out by | Branch | PR | Merged | Released | Pinned |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|
-| [imio.directory.core](#imiodirectorycore-and-imiodirectorypolicy) | dev, prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
-| [imio.directory.policy](#imiodirectorycore-and-imiodirectorypolicy) | dev, prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
 | [imio.helpers](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiohelpers) 🚧 | dev, prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
 | [imio.pyutils](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiopyutils) | dev, prod | `master` | [#4](https://github.com/IMIO/imio.pyutils/pull/4) | ✅ | ⬜ | ⬜ |
 | [collective.autopublishing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveautopublishing) | prod | `plone62` | [#12](https://github.com/collective/collective.autopublishing/pull/12) | ⬜ | ⬜ | ⬜ |
@@ -39,6 +37,8 @@ Plone 6.2.3)
 | [collective.timedevents](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivetimedevents) | ➖ | ➖ | [#13](https://github.com/collective/collective.timedevents/pull/13) | ✅ | 2.0.0 | ✅ |
 | [imio.gdpr](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiogdpr) | ➖ | ➖ | [#5](https://github.com/IMIO/imio.gdpr/pull/5) | ✅ | 2.0.0 | ✅ |
 | [imio.smartweb.locales](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiosmartwebcommon-core-locales-policy) | ➖ | ➖ | [#4](https://github.com/IMIO/imio.smartweb.locales/pull/4) | ✅ | 2.0.0 | ✅ |
+| [imio.directory.core](#imiodirectorycore-and-imiodirectorypolicy) | dev | `main` | [#18](https://github.com/IMIO/imio.directory.core/pull/18) | ✅ | 2.0.0 | ✅ |
+| [imio.directory.policy](#imiodirectorycore-and-imiodirectorypolicy) | dev | `main` | [#8](https://github.com/IMIO/imio.directory.policy/pull/8) | ✅ | 2.0.0 | ✅ |
 | [imio.smartweb.common](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiosmartwebcommon-core-locales-policy) | dev | `main` | [#37](https://github.com/IMIO/imio.smartweb.common/pull/37) | ✅ | 2.0.0 | ✅ |
 | [pas.plugins.kimug](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#paspluginskimug) | dev | `main` | [#34](https://github.com/IMIO/pas.plugins.kimug/pull/34) | ✅ | 2.0.0 | ✅ |
 
@@ -67,15 +67,21 @@ and [collective.schedulefield](#collectiveschedulefield).
 
 ### Open pull requests
 
-- [ ] imio.directory.core: merge `main` into `plone62` first. `main` has
-  released 1.2.31 since the branch was made, and the branch's `CHANGES.rst`
-  still lists its PEP 420 entry under "1.2.31 (unreleased)".
-- [ ] imio.directory.core and imio.directory.policy: `plone62` into `main`.
-- [ ] Their `base.cfg` copy the `collective.schedulefield` and `vobject` pins,
-  and imio.directory.policy's checks out imio.directory.core in a `[sources]`
-  section of its own, because "buildout.directory has no plone62 branch
-  yet". It has one now: extend this repository's `versions.cfg` and
-  `sources.cfg` from the `plone62` branch instead.
+- [x] imio.directory.core [#18](https://github.com/IMIO/imio.directory.core/pull/18)
+  and imio.directory.policy
+  [#8](https://github.com/IMIO/imio.directory.policy/pull/8): merged into
+  `main` and released as 2.0.0 (2026-11-20).
+- [ ] imio.directory.core: 2.0.0 was tagged on `plone62`, then #18 was
+  squash-merged, so `main` doesn't have the release commit: its
+  `CHANGES.rst` still says "1.2.32 (unreleased)" and `setup.py` 1.2.32.dev0.
+  Bring `main` to 2.0.1.dev0 with a 2.0.0 section before the next release.
+- [ ] imio.directory.policy 2.0.0's `setup.py` still declares Plone 6.1 (and
+  Python 3.12, 3.13), although its changelog says Plone 6.2: fix the
+  classifiers in the next release.
+- [ ] imio.directory.core's `base.cfg` (still in 2.0.0) copies the
+  `collective.schedulefield` and `vobject` pins, because "buildout.directory
+  has no plone62 branch yet". It has one now: extend this repository's
+  `versions.cfg` from the `plone62` branch instead.
 
 The PRs of the shared packages are tracked in the
 [SmartWeb guide](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#open-pull-requests).
@@ -120,7 +126,8 @@ The PRs of the shared packages are tracked in the
 - [ ] Make `dev.cfg` and `prod.cfg` check out the same packages. Today only
   prod checks out collective.autopublishing, and only dev checks out
   pas.plugins.kimug, so a dev instance doesn't run the code of the image.
-  imio.smartweb.common, checked out by dev only, is intended.
+  imio.directory.core, imio.directory.policy and imio.smartweb.common,
+  checked out by dev only, are intended.
 
 ### Release
 
@@ -132,14 +139,11 @@ git branch, so the order matters:
   imio.smartweb.common is done: 2.0.0 is released and pinned in
   `versions.cfg`.
 - [ ] collective.schedulefield, as 2.0.0: it drops Plone 6.0 and 6.1.
-- [ ] imio.directory.core, then imio.directory.policy (it requires
-  imio.directory.core). Release them as 2.0.0, as the SmartWeb guide does
-  for the other packages: they drop Plone 6.1. Their `CHANGES.rst` still says
-  1.2.31 (already released from `main`) and 1.1.10.
-- [ ] Pin each native release in `versions.cfg`, replacing the old-style
-  pins (imio.directory.core 1.2.31, imio.directory.policy 1.1.9,
-  collective.schedulefield 1.1). Then drop the checkouts and their
-  `sources.cfg` lines.
+- [x] imio.directory.core and imio.directory.policy: 2.0.0 released and
+  pinned in `versions.cfg` (2026-11-20). `dev.cfg` still checks them out,
+  from `main`.
+- [ ] Pin collective.schedulefield's native release in `versions.cfg`,
+  replacing 1.1.
 
 ### Check by hand on a Directory site
 
@@ -223,15 +227,19 @@ of 1.2.65. A dev instance checks out `main`
 collective.fingerpointing and collective.privacy: both now come from the
 native 2.0.0 releases that buildout.smartweb pins.
 
+imio.directory.core and imio.directory.policy, from `prod.cfg` only: the
+image installs the native 2.0.0, which `versions.cfg` pins in place of
+1.2.31 and 1.1.9. A dev instance checks out `main`.
+
 ## imio.directory.core and imio.directory.policy
 
 **Namespaces** `imio`, `imio.directory` · **Repositories**
 [IMIO/imio.directory.core](https://github.com/IMIO/imio.directory.core) and
 [IMIO/imio.directory.policy](https://github.com/IMIO/imio.directory.policy),
-branch `plone62` · **Variant**
+branch `main` · **Variant**
 [setup.py](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#the-migration-recipe)
-· **Checked out by** `dev.cfg`, `prod.cfg` · **Older stacks** (Plone 6.1)
-stay on 1.2.x and 1.1.x
+· **Checked out by** `dev.cfg` · **Older stacks** (Plone 6.1) stay on 1.2.x
+and 1.1.x
 
 Migrated by a colleague on 2026-11-17 and 2026-11-18. Each branch is 3
 commits ahead of `main`; imio.directory.core's is also 2 commits behind (the
@@ -245,6 +253,12 @@ commits ahead of `main`; imio.directory.core's is also 2 commits behind (the
   collective.behavior.talcondition, collective.privacy, and
   collective.timedevents for the policy).
 - Classifiers: Plone 6.2 only, and Python 3.14, which the CI matrix now tests.
+
+Both are merged into `main`
+([#18](https://github.com/IMIO/imio.directory.core/pull/18),
+[#8](https://github.com/IMIO/imio.directory.policy/pull/8)) and released as
+**2.0.0** on 2026-11-20 (Python 3.12+). `versions.cfg` pins both, so the
+image installs the releases.
 
 ## collective.schedulefield
 
