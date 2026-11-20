@@ -22,6 +22,10 @@ flowchart TD
     F --> G[Push to Harbor]
     G --> H[Deploy to staging via Rundeck]
 
+    P[push to plone62 branch] -->|plone62.yml| Q[Build & push image :short_sha]
+    Q --> T[Test image :short_sha]
+    T --> R[Tag image :plone62\nno deploy]
+
     I[push a git tag] -->|prod.yml| J{quick release?\ntag ends with -quick}
     J -- No --> K[Schedule deploy\nnext day at 3:00 AM]
     J -- Yes --> L[Deploy immediately]
@@ -152,6 +156,35 @@ sequenceDiagram
 
 ---
 
+## plone62.yml — Publish and test plone62 image
+
+**Trigger:** push to the `plone62` branch (tags excluded), or manual via `workflow_dispatch`.
+
+**Skip condition:** same as `dev.yml` — zest.releaser commits are ignored.
+
+Builds the Plone 6.2 image once and pushes it as `:{short_sha}`. `tests.yml` tests that image without building it again; only if the tests pass does `promote` add the `:plone62` tags, so a failing image is never tagged. Nothing is deployed: pull `:plone62` to try the branch. Its tags never touch `:dev`, `:staging` or `:latest`, so `prod.yml` keeps promoting the `main` image. Delete this workflow once `plone62` is merged into `main` (see the [migration guide](../../docs/plone62-migration.md#whats-left)).
+
+| Step | Action used |
+|------|-------------|
+| Build & push image | `IMIO/gha/build-push-notify@v7` |
+| Test image | `tests.yml` |
+| Image and filesystem scans | `IMIO/gha/trivy-scan-notify@v7` |
+| Tag image | `IMIO/gha/tag-notify@v8` |
+
+**Image tags produced:**
+- `:{short_sha}` (build)
+- `:plone62` and `:plone62-{run_number}` (once the tests pass)
+
+---
+
+## tests.yml — Test the image
+
+**Trigger:** pull request, manual via `workflow_dispatch`, or called by `plone62.yml` (`workflow_call`), which passes `image_name`/`image_tag` so the pushed image is tested instead of being built again. It does not gate `dev.yml` and `staging.yml` yet: they build the Plone 6.1 image, which these tests have never run on. Once `plone62` is merged, `build-push` will need this job, so a failing image never gets the `:dev` or `:staging` tag.
+
+It calls the reusable workflow `IMIO/gha-workflows/.github/workflows/plone-image-test.yml`, which builds the image from `tests/docker-compose.test.yml`, boots it with Postgres, memcached and Solr, and runs the generic checks of `IMIO/gha/plone-image-test-notify` plus `tests/test_directory.py`. The Solr container downloads the `directory` core configuration from buildout.smartweb when it starts. Locally: `make test`.
+
+---
+
 ## prod.yml — Promote staging to production
 
 **Trigger:** any git tag push, or manual via `workflow_dispatch`.
@@ -182,7 +215,7 @@ This workflow does **not** rebuild the image. It promotes the already-validated 
 
 | Variable | Used by | Purpose |
 |----------|---------|---------|
-| `IMAGE_NAME` | prod.yml | Docker image name (`web/smartweb/directory`) |
+| `IMAGE_NAME` | prod.yml, plone62.yml | Docker image name (`web/smartweb/directory`) |
 | `IMAGE_TAG_STAGING` | prod.yml | Source tag to promote from staging |
 | `IMAGE_TAG_PRODUCTION` | prod.yml | Target tag for production |
 | `RUNDECK_JOB_ID` | prod.yml | Rundeck job ID for production deployment |
