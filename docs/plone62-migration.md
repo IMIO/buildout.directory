@@ -38,7 +38,7 @@ Plone 6.2.3)
 | [imio.gdpr](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiogdpr) | ➖ | ➖ | [#5](https://github.com/IMIO/imio.gdpr/pull/5) | ✅ | 2.0.0 | ✅ |
 | [imio.smartweb.locales](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiosmartwebcommon-core-locales-policy) | ➖ | ➖ | [#4](https://github.com/IMIO/imio.smartweb.locales/pull/4) | ✅ | 2.0.0 | ✅ |
 | [imio.directory.core](#imiodirectorycore-and-imiodirectorypolicy) | dev | `main` | [#18](https://github.com/IMIO/imio.directory.core/pull/18) | ✅ | 2.0.0 | ✅ |
-| [imio.directory.policy](#imiodirectorycore-and-imiodirectorypolicy) | dev | `main` | [#8](https://github.com/IMIO/imio.directory.policy/pull/8) | ✅ | 2.0.0 | ✅ |
+| [imio.directory.policy](#imiodirectorycore-and-imiodirectorypolicy) 🚧 | dev | `main` | [#8](https://github.com/IMIO/imio.directory.policy/pull/8) | ✅ | 2.0.0 (old-style) | ✅ |
 | [imio.smartweb.common](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiosmartwebcommon-core-locales-policy) | dev | `main` | [#37](https://github.com/IMIO/imio.smartweb.common/pull/37) | ✅ | 2.0.0 | ✅ |
 | [pas.plugins.kimug](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#paspluginskimug) | dev | `main` | [#34](https://github.com/IMIO/pas.plugins.kimug/pull/34) | ✅ | 2.0.0 | ✅ |
 
@@ -71,13 +71,21 @@ and [collective.schedulefield](#collectiveschedulefield).
   and imio.directory.policy
   [#8](https://github.com/IMIO/imio.directory.policy/pull/8): merged into
   `main` and released as 2.0.0 (2026-11-20).
-- [ ] imio.directory.core: 2.0.0 was tagged on `plone62`, then #18 was
-  squash-merged, so `main` doesn't have the release commit: its
-  `CHANGES.rst` still says "1.2.32 (unreleased)" and `setup.py` 1.2.32.dev0.
-  Bring `main` to 2.0.1.dev0 with a 2.0.0 section before the next release.
-- [ ] imio.directory.policy 2.0.0's `setup.py` still declares Plone 6.1 (and
-  Python 3.12, 3.13), although its changelog says Plone 6.2: fix the
-  classifiers in the next release.
+- [x] imio.directory.core: 2.0.0 was tagged on `plone62`, then #18 was
+  squash-merged. `main` is aligned since
+  [`59e8bf9`](https://github.com/IMIO/imio.directory.core/commit/59e8bf9)
+  (2.0.1.dev0, 2.0.0 section, Plone 6.2 and Python 3.12 to 3.14
+  classifiers). The 2.0.0 wheel on PyPI is native.
+- [ ] imio.directory.policy: the 2.0.0 on PyPI is **not** native. The `2.0.0`
+  tag points to
+  [`32e7280`](https://github.com/IMIO/imio.directory.policy/commit/32e7280),
+  a "Preparing release 2.0.0" made on the old `main`, before #8 was merged.
+  The release commit on `main` (`be300a6`) has no tag. So the wheel still
+  has `src/imio/__init__.py` with `declare_namespace`, an `nspkg.pth`, the
+  Plone 6.1 classifier and Python 3.12–3.13 only. It imports on Plone 6.2.3
+  only because `base.cfg` loads horse-with-no-namespace. `main` itself is
+  right (Plone 6.2, Python 3.12 to 3.14, 2.0.1.dev0): release **2.0.1** from
+  `main`, then pin it in `versions.cfg`.
 - [ ] imio.directory.core's `base.cfg` (still in 2.0.0) copies the
   `collective.schedulefield` and `vobject` pins, because "buildout.directory
   has no plone62 branch yet". It has one now: extend this repository's
@@ -142,6 +150,9 @@ git branch, so the order matters:
 - [x] imio.directory.core and imio.directory.policy: 2.0.0 released and
   pinned in `versions.cfg` (2026-11-20). `dev.cfg` still checks them out,
   from `main`.
+- [ ] imio.directory.policy 2.0.1 from `main`: the 2.0.0 on PyPI was built
+  from the old `main` and is still old-style
+  ([details](#open-pull-requests)).
 - [ ] Pin collective.schedulefield's native release in `versions.cfg`,
   replacing 1.1.
 
