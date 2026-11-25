@@ -36,6 +36,10 @@
   buildout.smartweb does: ``plone61`` is merged into it
   [remdub]
 
+- WEB-4533 : Pin collective.schedulefield 2.0.0 (native namespace) and stop checking it
+  out: its ``plone62`` branch was deleted once merged
+  [remdub]
+
 
 1.6.19 (2026-11-12)
 -------------------
