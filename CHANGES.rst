@@ -40,6 +40,10 @@
   out: its ``plone62`` branch was deleted once merged
   [remdub]
 
+- WEB-4533 : Stop checking out collective.autopublishing and collective.upgrade: use the
+  native 2.0.0 and 3.0.0 releases that buildout.smartweb pins
+  [remdub]
+
 
 1.6.19 (2026-11-12)
 -------------------
