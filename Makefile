@@ -1,4 +1,6 @@
 VENV_FOLDER=.venv
+# Generic image checks from IMIO/gha; point it at a local clone to work on them.
+PLONE_IMAGE_TEST ?= git+https://github.com/IMIO/gha@v8\#subdirectory=plone-image-test-notify
 
 ifeq (, $(shell which uv ))
   $(error "[ERROR] The 'uv' command is missing from your PATH. Install it from: https://docs.astral.sh/uv/getting-started/installation/")
@@ -23,6 +25,14 @@ cleanall: ## Clean development environment
 .PHONY: upgrade-steps
 upgrade-steps: ## Run upgrade steps
 	bin/instance -O Plone run scripts/run_portal_upgrades.py
+
+.PHONY: test
+test: ## Build the prod image, boot it with Postgres/Solr/memcached and run the smoke tests
+	uvx --from "$(PLONE_IMAGE_TEST)" plone-image-test \
+		--compose-file tests/docker-compose.test.yml \
+		--addons imio.directory.policy \
+		--log-allowlist tests/log_allowlist.txt \
+		-v tests
 
 .PHONY: lint
 lint: ## Run pre-commit hooks
